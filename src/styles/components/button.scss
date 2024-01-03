@@ -1,0 +1,69 @@
+$clr-primary: #489fb5;
+$clr-car: #366166;
+$clr-coffee: #b55d41;
+$clr-rs: #906c58;
+
+button {
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  height: 55px;
+  border-radius: 160px;
+  padding-block: 0.45rem;
+  padding-inline: 1.5rem 0.5rem;
+  background-color: $clr-primary;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.2s;
+  svg {
+    transition: transform ease-in-out 0.3s;
+  }
+}
+    
+button:hover,
+button:focus {
+  opacity: 0.9;
+
+  svg {
+    transform: rotate(-35deg);
+  }
+}
+
+.btn-primary {
+  background-color: linear-gradient(90deg, #489fb5 0.18%, #1e889e 99.47%);
+}
+
+.btn-secondary {
+  background-color: transparent;
+}
+
+.btn-car {
+  border: 2px solid $clr-car;
+  color: $clr-car;
+
+  svg #circle {
+    fill: $clr-car;
+  }
+}
+
+.btn-coffee {
+  border: 2px solid $clr-coffee;
+  color: $clr-coffee;
+
+  svg #circle {
+    fill: $clr-coffee;
+  }
+}
+
+.btn-rs {
+  border: 2px solid $clr-rs;
+  color: $clr-rs;
+  
+  svg #circle {
+    fill: $clr-rs;
+  }
+}
