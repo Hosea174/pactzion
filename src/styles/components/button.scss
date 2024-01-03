@@ -1,7 +1,4 @@
-$clr-primary: #489fb5;
-$clr-car: #366166;
-$clr-coffee: #b55d41;
-$clr-rs: #906c58;
+@import "../global";
 
 button {
   outline: none;
@@ -13,7 +10,7 @@ button {
   border-radius: 160px;
   padding-block: 0.45rem;
   padding-inline: 1.5rem 0.5rem;
-  background-color: $clr-primary;
+  background-color: $clr-primary-500;
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
@@ -34,7 +31,7 @@ button:focus {
 }
 
 .btn-primary {
-  background-color: linear-gradient(90deg, #489fb5 0.18%, #1e889e 99.47%);
+  background-color: $clr-primary-400;
 }
 
 .btn-secondary {
@@ -42,28 +39,28 @@ button:focus {
 }
 
 .btn-car {
-  border: 2px solid $clr-car;
-  color: $clr-car;
+  border: 2px solid $clr-accent-car;
+  color: $clr-accent-car;
 
   svg #circle {
-    fill: $clr-car;
+    fill: $clr-accent-car;
   }
 }
 
 .btn-coffee {
-  border: 2px solid $clr-coffee;
-  color: $clr-coffee;
+  border: 2px solid $clr-accent-coffee;
+  color: $clr-accent-coffee;
 
   svg #circle {
-    fill: $clr-coffee;
+    fill: $clr-accent-coffee;
   }
 }
 
 .btn-rs {
-  border: 2px solid $clr-rs;
-  color: $clr-rs;
+  border: 2px solid $clr-accent-rs;
+  color: $clr-accent-rs;
   
   svg #circle {
-    fill: $clr-rs;
+    fill: $clr-accent-rs;
   }
 }
