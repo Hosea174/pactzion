@@ -1,32 +1,62 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.astro';
-import arrowIcon from '../assets/icons/arrowIcon.svg';
-
+// Component imports
+import Button from "../components/Button.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/pages/index.scss";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
-	<main>
-		<Button 
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container wrapper">
+        <!-- <div class="hero-text">
+          <h1 class="fs-primary-header fw-bold">
+            Shaping <span class="highlight" style="color: #240000">Global</span>
+            Trade
+          </h1>
+          <p>
+            We bring you the highest paying freight to your truck. Guaranteed
+            results or you DON'T pay us!
+          </p>
+        </div>
+
+        <Button class="btn-primary" text="Explore Our Products" /> -->
+      </div>
+      <section></section>
+    </section>
+  </main>
+
+  <!-- <Button 
 		class="btn-primary" 
 		text="Explore Our Products" 
 		/>
 
 		<Button 
-		class="btn-secondary btn-car" 
+		class="btn-tertiary btn-car" 
 		text="Explore Our Products" 
 		/>
 
 		<Button 
-		class="btn-secondary btn-coffee" 
+		class="btn-tertiary btn-coffee" 
 		text="Explore Our Products" 
 		/>
 
 		<Button 
-		class="btn-secondary btn-rs" 
+		class="btn-tertiary btn-rs" 
 		text="Explore Our Products" 
 		/>
 
-		<h1 style="font-family: 'Mona Sans';">Hello world</h1>
-	</main>
+		<Button 
+		class="btn-secondary" 
+		text="Explore Our Products" 
+		/>
+
+		<Button 
+		class="btn-tertiary btn-white" 
+		text="Explore Our Products" 
+		/> -->
 </Layout>

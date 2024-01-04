@@ -1,0 +1,28 @@
+@import "../global";
+
+.hero-section {
+  min-height: 100vh;
+  background-image: url("../../assets/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $clr-neutral-100;
+  // .wrapper {
+  //   position: relative;
+  //   padding-top: 10rem;
+  //   color: $clr-neutral-900;
+  //   min-height: 110vh;
+
+  //   .hero-text {
+  //     width: 50%;
+  //     position: absolute;
+  //     left: 48%;
+
+  //     p,
+  //     h1 {
+  //       margin-bottom: $size-500;
+  //     }
+  //   }
+
+  // }
+}

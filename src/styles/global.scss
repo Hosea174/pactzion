@@ -10,6 +10,7 @@
 // Primary colors
 $clr-primary-500: #489fb5;
 $clr-primary-400: linear-gradient(90deg, #489fb5 0.18%, #1e889e 99.47%);;
+$clr-primary-300: #76E2F5;
 
 // Accent colors
 $clr-accent-car: #366166;
@@ -18,12 +19,11 @@ $clr-accent-rs: #906c58;
 
 // Neutral colors
 $clr-neutral-900: #00121A;
-$clr-neutral-800: #2B2D42;
+// $clr-neutral-800: #2B2D42;
+$clr-neutral-800: #1C2327;
 $clr-neutral-700: #E8EAF6;
 $clr-neutral-600: #F3F5FF;
 $clr-neutral-100: #FFFFFF;
-
-
 
 // font families
 $ff-header: "Mona Sans", sans-serif;
@@ -46,7 +46,7 @@ $fs-400: 1.25rem;
 $fs-300: 1rem;
 $fs-200: 0.875rem;
 
-$fs-primary-header: $fs-600;
+$fs-primary-header: $fs-700;
 $fs-secondary-header: $fs-650;
 $fs-body: $fs-300;
 $fs-section-labels: $fs-400;
