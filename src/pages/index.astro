@@ -3,7 +3,15 @@
 import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+
+// Stylesheet imports
 import "../styles/pages/index.scss";
+
+// Asset imports
+import fbIcon from "../assets/icons/fb-icon.svg";
+import inIcon from "../assets/icons/in-icon.svg";
+import line from "../assets/icons/line.svg";
+import ytIcon from "../assets/icons/yt-icon.svg";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
@@ -13,20 +21,39 @@ import "../styles/pages/index.scss";
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container wrapper">
-        <!-- <div class="hero-text">
-          <h1 class="fs-primary-header fw-bold">
-            Shaping <span class="highlight" style="color: #240000">Global</span>
-            Trade
-          </h1>
-          <p>
-            We bring you the highest paying freight to your truck. Guaranteed
-            results or you DON'T pay us!
-          </p>
+        <div class="section-label hero-label">
+          Leading global trader in Ethiopia
         </div>
-
-        <Button class="btn-primary" text="Explore Our Products" /> -->
+        <h1 class="fs-primary-header fw-bold">
+          Shaping <span class="highlight">Global</span>
+          Commerce
+        </h1>
+        <p>
+          Your Comprehensive Solution to Imports and Exports
+        </p>
+        <Button class="btn-primary" text="Explore Our Products" />
       </div>
-      <section></section>
+
+      <div class="hero-socials container">
+        <ul class="social-links" role="list">
+          <li>
+            <a href="#" class="yt-social"
+              ><img src={ytIcon.src} alt="YouTube" />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="in-social"
+              ><img src={inIcon.src} alt="Linkedin" />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="fb-social"
+              ><img src={fbIcon.src} alt="Facebook" />
+            </a>
+          </li>
+        </ul>
+        <img class="line-arrow" src={line.src} alt="" />
+      </div>
     </section>
   </main>
 

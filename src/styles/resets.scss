@@ -37,8 +37,8 @@ body {
 // Set core body defaults
 body {
   text-rendering: optimizeSpeed;
-  line-height: 1.8;
-  font-size: clamp($fs-body, 3vw, $fs-500);
+  line-height: normal;
+  font-size: $fs-body;
   font-family: $ff-body;
   background-color: $clr-neutral-600;
 }

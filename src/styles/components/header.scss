@@ -40,8 +40,9 @@ header {
 
         a {
           padding-bottom: 0.7rem;
+
           &.active {
-            color: $clr-primary-500;
+            color: $clr-primary-300;
             font-weight: $fw-bold;
           }
         }
@@ -106,6 +107,10 @@ header {
         justify-content: flex-start;
       }
 
+      .logo {
+        width: 150px;
+      }
+
       .nav-button {
         display: none;
       }
@@ -140,14 +145,13 @@ header {
           margin-block: $size-500;
           transform: translateY(-50px);
           opacity: 0;
-          font-size: $fs-400;
+          font-size: $fs-500;
         }
       }
 
       .nav-links.open {
-        opacity: .8;
-        backdrop-filter: blur(80px);
-        padding-top: 100px;
+        opacity: .95;
+        padding-top: 150px;
         min-height: 100vh;
         overflow: visible;
       }
