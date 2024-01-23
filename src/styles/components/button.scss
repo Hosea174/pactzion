@@ -34,8 +34,8 @@ button:focus {
 }
 
 .btn-secondary {
-  background-color: $clr-neutral-600;
-  border: 2px solid $clr-neutral-600;
+  background-color: $clr-neutral-700;
+  border: 2px solid $clr-neutral-700;
   color: $clr-neutral-800;
 
   svg #circle {
@@ -75,10 +75,10 @@ button:focus {
 }
 
 .btn-white {
-  border: 2px solid $clr-neutral-600;
-  color: $clr-neutral-600;
+  border: 2px solid $clr-neutral-100;
+  color: $clr-neutral-700;
 
   svg #circle {
-    fill: $clr-neutral-600;
+    fill: $clr-neutral-700;
   }
 }

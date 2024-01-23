@@ -5,16 +5,13 @@ import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Stylesheet imports
-import "../styles/pages/index.scss";
+import "../styles/pages/about.scss";
 
 // Asset imports
-import featuredIcon from "../assets/icons/featured-icon.svg";
 import fbIcon from "../assets/icons/fb-icon.svg";
 import inIcon from "../assets/icons/in-icon.svg";
-import ytIcon from "../assets/icons/yt-icon.svg";
 import line from "../assets/icons/line.svg";
-
-import car1 from "../assets/car-1.png";
+import ytIcon from "../assets/icons/yt-icon.svg";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
@@ -25,14 +22,16 @@ import car1 from "../assets/car-1.png";
     <section class="hero-section">
       <div class="container wrapper">
         <div class="section-label hero-label">
-          <img src={featuredIcon.src} alt="">
-          <span>Featured Product</span>
+          Leading global trader in Ethiopia
         </div>
         <h1 class="fs-primary-header fw-bold">
-          CHANGAN
+          Shaping <span class="highlight">Global</span>
+          Commerce
         </h1>
-        <!-- <img src={car1.src} alt="Changan Deppal S7"> -->
+        <p>Your Comprehensive Solution to Imports and Exports</p>
+        <Button class="btn-primary" text="Explore Our Products" />
       </div>
+
       <div class="hero-socials container">
         <ul class="social-links" role="list">
           <li>
@@ -53,9 +52,6 @@ import car1 from "../assets/car-1.png";
         </ul>
         <img class="line-arrow" src={line.src} alt="" />
       </div>
-
-      <Button class="btn-primary" text="Explore Our Products" />
-
     </section>
   </main>
 
