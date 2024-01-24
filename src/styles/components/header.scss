@@ -3,7 +3,7 @@
 
 header {
   position: absolute;
-  top: 1.25rem;
+  top: 1rem;
   left: 50%;
   right: 0;
   transform: translate(-50%, 0);
@@ -17,7 +17,7 @@ header {
     background: rgba(30, 44, 57, 0.82);
     backdrop-filter: blur(21px);
     padding-block: 1.2rem;
-    height: 5rem;
+    height: 5rem; 
     width: 100%;
     display: flex;
     justify-content: space-between;

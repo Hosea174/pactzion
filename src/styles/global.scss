@@ -7,6 +7,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Nikea';
   src: url('/fonts/NIKEA.woff') format('woff');
@@ -73,7 +74,7 @@ $size-900: 5rem;
 // Utility classes
 .container {
   max-width: 1450px;
-  padding-inline: $size-500;
+  padding-inline: $size-400;
   margin: 0 auto;
 }
 
@@ -96,7 +97,7 @@ $size-900: 5rem;
 .fs-primary-header {
   text-transform: capitalize;
   font-family: $ff-header;
-  font-size: clamp($fs-primary-header, 12vw, 9.5rem);
+  font-size: clamp(3rem, 0.45412844036697253rem + 9.98165137614679vw, 9.5rem);
   line-height: 100%;
   color: $clr-neutral-100;
   letter-spacing: -1.6px;
@@ -105,7 +106,7 @@ $size-900: 5rem;
 
 .fs-secondary-header {
   font-family: $ff-body;
-  font-size: clamp($fs-secondary-header, 5vw, 2rem);
+  font-size: clamp(2.2rem, 1.1674311926605505rem + 0.3669724770642202vw, 4rem);
   line-height: 100%;
 }
 
