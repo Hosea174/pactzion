@@ -13,9 +13,8 @@ button {
   color: #fff;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
-
+  
   svg {
-    // transform: scale(0.925 );
     transition: transform ease-in-out 0.2s;
   }
 }
@@ -23,7 +22,7 @@ button {
 button:hover,
 button:focus {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  filter: brightness(95%);
+  transform: scale(0.96);
   svg {
     transform: rotate(-40deg);
   }
@@ -31,6 +30,11 @@ button:focus {
 
 .btn-primary {
   background-color: $clr-primary-400;
+  color: $clr-neutral-900;
+  
+  svg #circle {
+    fill: $clr-neutral-900;
+  }
 }
 
 .btn-secondary {

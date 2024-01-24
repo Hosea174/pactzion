@@ -8,11 +8,11 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/pages/index.scss";
 
 // Asset imports
-import featuredIcon from "../assets/icons/featured-icon.svg";
 import fbIcon from "../assets/icons/fb-icon.svg";
+import featuredIcon from "../assets/icons/featured-icon.svg";
 import inIcon from "../assets/icons/in-icon.svg";
-import ytIcon from "../assets/icons/yt-icon.svg";
 import line from "../assets/icons/line.svg";
+import ytIcon from "../assets/icons/yt-icon.svg";
 
 import car1 from "../assets/car-1.png";
 ---
@@ -25,36 +25,61 @@ import car1 from "../assets/car-1.png";
     <section class="hero-section">
       <div class="container wrapper">
         <div class="section-label hero-label">
-          <img src={featuredIcon.src} alt="">
+          <img src={featuredIcon.src} alt="" />
           <span>Featured Product</span>
         </div>
-        <h1 class="fs-primary-header fw-bold">
-          CHANGAN
-        </h1>
-        <!-- <img src={car1.src} alt="Changan Deppal S7"> -->
-      </div>
-      <div class="hero-socials container">
-        <ul class="social-links" role="list">
-          <li>
-            <a href="#" class="yt-social"
-              ><img src={ytIcon.src} alt="YouTube" />
-            </a>
-          </li>
-          <li>
-            <a href="#" class="in-social"
-              ><img src={inIcon.src} alt="Linkedin" />
-            </a>
-          </li>
-          <li>
-            <a href="#" class="fb-social"
-              ><img src={fbIcon.src} alt="Facebook" />
-            </a>
-          </li>
-        </ul>
-        <img class="line-arrow" src={line.src} alt="" />
-      </div>
+        <div class="car-text-box">
+          <h1 class="fs-primary-header">CHANGAN</h1>
+          <div class="img-wrapper">
+            <img
+              class="hero-car"
+              src={car1.src}
+              alt="Changan Deppal S7"
+              width="680"
+            />
+          </div>
+        </div>
 
-      <Button class="btn-primary" text="Explore Our Products" />
+        <div class="hero-socials">
+          <img class="line-arrow" src={line.src} alt="" />
+
+          <ul class="social-links" role="list">
+            <li>
+              <a href="#" class="yt-social"
+                ><img src={ytIcon.src} alt="YouTube" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="in-social"
+                ><img src={inIcon.src} alt="Linkedin" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fb-social"
+                ><img src={fbIcon.src} alt="Facebook" />
+              </a>
+            </li>
+          </ul>
+
+          <img
+            class="line-arrow"
+            src={line.src}
+            alt=""
+            style="transform: scaleY(-1);"
+          />
+        </div>
+
+        <div class="bottom-box">
+          <div class="hero-cta">
+            <h2 class="fs-secondary-header">Effortless Elegance on Every Road.</h2>
+            <Button class="btn-primary" text="Explore Changan" />
+          </div>
+          <div class="pactzion-info">
+            <p><span style="color: #53B7D2">PactZion</span> is the exclusive distributor of Changan Electric Vehicles in Ethiopia.</p>
+          </div>
+        </div>
+
+      </div>
 
     </section>
   </main>

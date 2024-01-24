@@ -1,32 +1,24 @@
 @import "../global";
 
 .hero-section {
-  position: relative;
   min-height: 100vh;
   background-image: url("../../assets/hero-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: $clr-neutral-100;
+  display: block;
 
   .wrapper {
-    margin-inline: auto;
-    padding-top: 12rem;
+    position: relative;
+    padding-block: 10rem 2rem;
     text-align: center;
-
-    * {
-      margin-inline: auto;
-    }
-
-    h1 {
-      background: linear-gradient(182deg, #F9FAFC 52.09%, #9F9F9F 98.31%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    width: 100%;
+    height: 100%;
 
     .hero-label {
-      margin-bottom: $size-500;
+      margin-inline: auto;
+      margin-block-end: $size-700;
       width: fit-content;
       display: flex;
       gap: $size-400;
@@ -37,20 +29,110 @@
       background: $clr-neutral-800;
     }
 
-  }
+    .car-text-box {
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 50px);
+      position: relative;
 
-  .hero-socials {
-    margin-top: 100px;
-    display: flex;
-    // flex-direction: column;
-    gap: $size-300;
+      h1 {
+        position: relative;
+        background: linear-gradient(182deg, #F9FAFC 52.09%, #9F9F9F 98.31%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        grid-row: 1 / 4;
+        grid-column: 1;
+      }
 
-    .social-links {
-      // flex-direction: column;
-      display: flex;
-      gap: $size-300;
+      h1::after {
+        content: "CHANGAN";
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        -webkit-text-stroke: 1px #c8c9ca;
+        text-stroke: 1px #c8c9ca;
+        text-shadow: none;
+      }
+
+      .img-wrapper {
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        grid-row: 3 / 9;
+        grid-column: 1;
+        width: clamp(350px, 70vw, 100%);
+
+        .hero-car {
+          margin-inline: auto;
+          max-width: 100%;
+          height: auto;
+        }
+      }
     }
+
+    .hero-socials {
+      position: absolute;
+      top: 50%;
+      transform: translate(-7px, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $size-400;
+
+      .line-arrow {
+        width: 2px;
+        height: 77px;
+      }
+
+      .social-links {
+        flex-direction: column;
+        display: flex;
+        gap: $size-400;
+      }
+    }
+
+    .bottom-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      text-align: left;
+
+      .hero-cta {
+        max-width: 450px;
+        padding-left: 2rem;
+        border-left-width: 3px;
+        border-left-style: solid;
+        border-left-image: linear-gradient(270deg, #AFAFAF 0%, #FFF 100%) 1;
+
+        h2 {
+          font-weight: 450;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .pactzion-info {
+        font-size: $fs-300;
+        color: $clr-neutral-300;
+        max-width: 350px;
+        padding: 0.875rem 0.25rem 0.875rem 1rem;
+        border-radius: 0.75rem;
+        background: rgba(0, 21, 34, 0.25);
+        backdrop-filter: blur(28.700000762939453px);
+        height: fit-content;
+      }
+    }
+
   }
+
 
   @media screen and (max-width: 630px) {
     .wrapper {

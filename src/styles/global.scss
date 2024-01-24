@@ -16,7 +16,8 @@
 
 // Primary colors
 $clr-primary-500: #16425B;
-$clr-primary-400: #2CBAF6;
+// $clr-primary-400: #2CBAF6;
+$clr-primary-400: #21acc9;
 $clr-primary-300: #AFD9E1;
 
 // Accent colors
@@ -28,11 +29,12 @@ $clr-accent-rs: #906c58;
 $clr-neutral-900: #00171F;
 $clr-neutral-800: #272D32;
 $clr-neutral-700: #F9FAFC;
+$clr-neutral-300: #DCDCDC;
 $clr-neutral-100: #FFFFFF;
 
 // font families
 $ff-header: "Nikea", sans-serif;
-$ff-body: "Montserrat", sans-serif;
+$ff-body: "Mona Sans", sans-serif;
 
 // font weights
 $fw-lighter: 300;
@@ -94,7 +96,7 @@ $size-900: 5rem;
 .fs-primary-header {
   text-transform: capitalize;
   font-family: $ff-header;
-  font-size: clamp($fs-primary-header, 12vw, 10rem);
+  font-size: clamp($fs-primary-header, 12vw, 9.5rem);
   line-height: 100%;
   color: $clr-neutral-100;
   letter-spacing: -1.6px;
@@ -102,9 +104,9 @@ $size-900: 5rem;
 }
 
 .fs-secondary-header {
-  font-family: $ff-header;
-  font-size: clamp($fs-secondary-header, 7vw, 3rem);
-  line-height: 124%;
+  font-family: $ff-body;
+  font-size: clamp($fs-secondary-header, 5vw, 2rem);
+  line-height: 100%;
 }
 
 .fs-small {
