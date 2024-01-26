@@ -8,13 +8,17 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/pages/index.scss";
 
 // Asset imports
+import connectionIcon from "../assets/icons/connection.svg";
 import fbIcon from "../assets/icons/fb-icon.svg";
 import featuredIcon from "../assets/icons/featured-icon.svg";
+import growthIcon from "../assets/icons/growth.svg";
 import inIcon from "../assets/icons/in-icon.svg";
+import jobIcon from "../assets/icons/jobs.svg";
 import line from "../assets/icons/line.svg";
 import ytIcon from "../assets/icons/yt-icon.svg";
 
 import car1 from "../assets/car-1.png";
+import office from "../assets/pactzion-office.png";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
@@ -71,7 +75,7 @@ import car1 from "../assets/car-1.png";
 
         <div class="bottom-box">
           <div class="hero-cta">
-            <h2 class="fs-secondary-header fw-semi-bold">
+            <h2 class="fs-secondary-header fw-semi-bold-100">
               Effortless Elegance on Every Road.
             </h2>
             <Button class="btn-primary" text="Explore Changan" />
@@ -81,6 +85,104 @@ import car1 from "../assets/car-1.png";
               <span style="color: #53B7D2">PactZion</span> is the exclusive distributor
               of Changan Electric Vehicles in Ethiopia.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container wrapper">
+        <p class="section-label fs-">Who we are</p>
+        <h2 class="fs-secondary-header fw-semi-bold-200 text-center">
+          At the Heart of PactZion's Trade Story
+        </h2>
+
+        <div class="about-box">
+          <div class="about-card card">
+            <div class="abt-left">
+              <div class="about-text-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="49"
+                  height="49"
+                  fill="none"
+                >
+                  <path
+                    fill="#AFD9E1"
+                    fill-rule="evenodd"
+                    d="M41.912 41.404c9.372-9.373 9.372-24.569 0-33.941-9.373-9.373-24.569-9.373-33.941 0-9.373 9.372-9.373 24.568 0 33.94 9.372 9.373 24.568 9.373 33.94 0ZM16.17 31.412c-.022.48.148.933.473 1.258.675.675 1.824.623 2.564-.117l10.62-10.62-.308 6.737c-.02.244.01.485.087.708a1.605 1.605 0 0 0 .938.975c.22.085.459.123.702.112a1.92 1.92 0 0 0 .715-.177 2.057 2.057 0 0 0 1.031-1.064c.098-.232.15-.476.152-.719l.507-11.113a1.657 1.657 0 0 0-.473-1.258 1.658 1.658 0 0 0-1.257-.472l-11.113.507c-.47.038-.924.256-1.266.61a1.99 1.99 0 0 0-.566 1.282c-.022.47.14.913.45 1.236a1.65 1.65 0 0 0 1.216.496l6.737-.307-10.62 10.62a1.992 1.992 0 0 0-.589 1.306Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <h3 class="fs-tertiary-header fw-semi-bold-200">
+                  Shaping Global Trade
+                </h3>
+                <p>
+                  PactZion is a pioneer global trader in Ethiopia, founded in
+                  2017, with a vision to establish a robust network of trade
+                  that introduces Ethiopian culture and products to the global
+                  stage.
+                </p>
+              </div>
+
+              <div class="missions-wrapper">
+                <ul class="missions" role="list">
+                  <li class="mission">
+                    <div class="mission-icon">
+                      <img src={growthIcon.src} alt="" />
+                    </div>
+                    <p class="fw-semi-bold-200">
+                      Promoting sustainable growth in Ethiopia
+                    </p>
+                  </li>
+                  <li class="mission">
+                    <div class="mission-icon">
+                      <img src={connectionIcon.src} alt="" />
+                    </div>
+                    <p class="fw-semi-bold-200">
+                      Building meaningful connections
+                    </p>
+                  </li>
+                  <li class="mission">
+                    <div class="mission-icon">
+                      <img src={jobIcon.src} alt="" />
+                    </div>
+                    <p class="fw-semi-bold-200">Creating job opportunities</p>
+                  </li>
+                </ul>
+                <Button class="btn-primary" text="Our Mission" />
+              </div>
+            </div>
+            <div class="abt-right">
+              <img src={office.src} alt="Pactzion Office" />
+            </div>
+          </div>
+
+          <div class="contact-card card">
+            <div class="contact-top-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="49"
+                height="49"
+                fill="none"
+              >
+                <path
+                  fill="#00171F"
+                  fill-rule="evenodd"
+                  d="M41.912 41.404c9.372-9.373 9.372-24.569 0-33.941-9.373-9.373-24.569-9.373-33.941 0-9.373 9.372-9.373 24.568 0 33.94 9.372 9.373 24.568 9.373 33.94 0ZM16.17 31.412c-.022.48.148.933.473 1.258.675.675 1.824.623 2.564-.117l10.62-10.62-.308 6.737c-.02.244.01.485.087.708a1.605 1.605 0 0 0 .938.975c.22.085.459.123.702.112a1.92 1.92 0 0 0 .715-.177 2.057 2.057 0 0 0 1.031-1.064c.098-.232.15-.476.152-.719l.507-11.113a1.657 1.657 0 0 0-.473-1.258 1.658 1.658 0 0 0-1.257-.472l-11.113.507c-.47.038-.924.256-1.266.61a1.99 1.99 0 0 0-.566 1.282c-.022.47.14.913.45 1.236a1.65 1.65 0 0 0 1.216.496l6.737-.307-10.62 10.62a1.992 1.992 0 0 0-.589 1.306Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="fs-tertiary-header fw-semi-bold-200">Let's Connect</h3>
+            </div>
+
+            <div class="contact-bottom-wrapper">
+              <p>
+                Uniting Ethiopia and the world, PactZion is your trusted trade
+                partner. A brief message is all it takes to join our global
+                journey.
+              </p>
+
+              <Button class="btn-tertiary btn-dark" text="Contact Us" />
+            </div>
           </div>
         </div>
       </div>

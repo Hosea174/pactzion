@@ -2,20 +2,26 @@
 // Component imports
 import "../styles/components/button.scss";
 
-const {text, class: className} = Astro.props;
+const { text, class: className } = Astro.props;
 
 interface Props {
-    text: string;
-    class: string;
+  text: string;
+  class: string;
 }
-
 ---
 
 <!-- <button class={className}> -->
-<button class:list={['fw-semi-bold fs-small', className]}>
+<button class:list={["fw-semi-bold-200 fs-small", className]}>
   {text}
 
-  <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="none">
-    <path id="circle" fill="#fff" fill-rule="evenodd" d="M39 19.5C39 30.27 30.27 39 19.5 39S0 30.27 0 19.5 8.73 0 19.5 0 39 8.73 39 19.5Zm-28.548-1.029a1.348 1.348 0 0 0-.451.995c0 .776.691 1.406 1.541 1.406h12.202l-4.047 3.694a1.4 1.4 0 0 0-.357.456 1.297 1.297 0 0 0-.022 1.099c.08.178.195.337.34.468.149.135.323.24.512.31.39.144.82.137 1.204-.02.186-.075.356-.186.5-.326l6.677-6.094c.288-.263.45-.621.45-.993 0-.374-.162-.73-.451-.994l-6.676-6.094a1.624 1.624 0 0 0-1.077-.377c-.393.003-.77.15-1.063.411a1.35 1.35 0 0 0-.45.97 1.34 1.34 0 0 0 .413.984l4.047 3.693H11.542c-.409 0-.8.148-1.09.412Z" clip-rule="evenodd"/>
-  </svg>
+  <div class="btn-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="none">
+      <path
+        id="circle"
+        fill="#fff"
+        fill-rule="evenodd"
+        d="M39 19.5C39 30.27 30.27 39 19.5 39S0 30.27 0 19.5 8.73 0 19.5 0 39 8.73 39 19.5Zm-28.548-1.029a1.348 1.348 0 0 0-.451.995c0 .776.691 1.406 1.541 1.406h12.202l-4.047 3.694a1.4 1.4 0 0 0-.357.456 1.297 1.297 0 0 0-.022 1.099c.08.178.195.337.34.468.149.135.323.24.512.31.39.144.82.137 1.204-.02.186-.075.356-.186.5-.326l6.677-6.094c.288-.263.45-.621.45-.993 0-.374-.162-.73-.451-.994l-6.676-6.094a1.624 1.624 0 0 0-1.077-.377c-.393.003-.77.15-1.063.411a1.35 1.35 0 0 0-.45.97 1.34 1.34 0 0 0 .413.984l4.047 3.693H11.542c-.409 0-.8.148-1.09.412Z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </div>
 </button>

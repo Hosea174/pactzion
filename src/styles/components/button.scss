@@ -14,16 +14,20 @@ button {
   cursor: pointer;
   transition: all ease-in-out 0.2s;
   
-  svg {
+  .btn-icon {
+    width: 39px;
+    height: 39px;
     transition: transform ease-in-out 0.2s;
+    svg {
+      overflow: visible;
+    }
   }
 }
 
 button:hover,
 button:focus {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  transform: scale(0.96);
-  svg {
+  transform: translateY(1px) scale(0.99);
+  .btn-icon {
     transform: rotate(-40deg);
   }
 }
@@ -51,38 +55,20 @@ button:focus {
   background-color: transparent;
 }
 
-.btn-car {
-  border: 2px solid $clr-accent-car;
-  color: $clr-accent-car;
-
-  svg #circle {
-    fill: $clr-accent-car;
-  }
-}
-
-.btn-coffee {
-  border: 2px solid $clr-accent-coffee;
-  color: $clr-accent-coffee;
-
-  svg #circle {
-    fill: $clr-accent-coffee;
-  }
-}
-
-.btn-rs {
-  border: 2px solid $clr-accent-rs;
-  color: $clr-accent-rs;
-
-  svg #circle {
-    fill: $clr-accent-rs;
-  }
-}
-
 .btn-white {
   border: 2px solid $clr-neutral-100;
   color: $clr-neutral-700;
 
   svg #circle {
     fill: $clr-neutral-700;
+  }
+}
+
+.btn-dark {
+  border: 2px solid $clr-neutral-900;
+  color: $clr-neutral-900;
+
+  svg #circle {
+    fill: $clr-neutral-900;
   }
 }
