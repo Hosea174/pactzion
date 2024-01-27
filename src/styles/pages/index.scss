@@ -1,8 +1,8 @@
 @import "../global";
 
 .hero-section {
-  min-height: 100vh;
-  // max-height: 745px;
+  // min-height: 100vh;
+  max-height: 780px;
   background-image: url("../../assets/hero-bg-dk.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -58,6 +58,7 @@
         -webkit-text-stroke: 1px #d6d8d9;
         text-stroke: 1px #d6d8d9;
         text-shadow: none;
+        pointer-events: none
       }
 
       .img-wrapper {
@@ -212,7 +213,6 @@
       width: 100%;
       display: flex;
       gap: $size-600;
-      height: 620px;
 
       .card {
         padding: $size-600;
@@ -302,7 +302,7 @@
       }
     }
 
-    @media screen and (max-width: 1120px) {
+    @media screen and (max-width: 1125px) {
       .about-box {
         flex-direction: column;
 
@@ -330,32 +330,126 @@
 
         .about-card {
           position: relative;
-          height: 780px;
+          height: 700px;
           flex-direction: column-reverse;
-          gap: $size-600;
-  
+          gap: $size-400;
+
           .abt-left {
             .about-text-wrapper svg {
               position: absolute;
               top: 2.5rem;
               left: 2rem;
             }
+
             max-width: 100%;
             height: 60%;
           }
-  
+
           .abt-right {
             width: 100%;
             height: 40%;
-  
+
             img {
               border-radius: 0.9375rem;
             }
           }
         }
       }
-
     }
+
+    @media screen and (max-width: 440px) {
+      .about-box .about-card {
+        height: 760px;
+
+        .abt-left {
+          .missions {
+            font-size: $fs-200;
+          }
+        }
+      }
+    }
+
   }
 
+}
+
+
+.what-we-do-section {
+  background-image: url("../../assets/blue-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .wrapper {
+    padding-block: $size-900;
+    color: $clr-neutral-100;
+
+    h2 {
+      margin-block-start: $size-600;
+      line-height: 135%;
+      border-right: solid 3px white;
+    }
+  }
+}
+
+.business-portfolio {
+  .wrapper {
+    padding-block: $size-900;
+
+    h2 {
+      margin-block: $size-600 $size-800;
+    }
+
+    .swiper {
+      cursor: move;
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+    }
+
+    .swiper:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+
+    .portfolio-card {
+      padding: 4.675rem 2.1875rem;
+      border-radius: 20px;
+      height: 600px;
+      position: relative;
+      max-width: 1200px;
+
+      .card-img {
+        z-index: -1;
+        position: absolute;
+        bottom: 2.678rem;
+        right: 2.1875rem;
+      }
+
+      &.card-car {
+        background: conic-gradient(from 180deg at 50% 50%, #9B2100 0deg, #E54D24 360deg);
+      }
+
+      &.card-rs {
+        background: conic-gradient(from 180deg at 50% 50%, #82A9CB 0deg, #3179BE 360deg);
+
+        .card-img {
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      .business-info {
+        max-width: 400px;
+        color: $clr-neutral-100;
+
+        p {
+          margin-block: $size-200 $size-600;
+        }
+
+      }
+    }
+
+  }
 }
