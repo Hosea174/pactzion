@@ -2,6 +2,7 @@
 // Component imports
 import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
+import ExportCard from "../components/ExportCard.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Stylesheet imports
@@ -19,6 +20,11 @@ import ytIcon from "../assets/icons/yt-icon.svg";
 
 // Image asset imports
 import car1 from "../assets/car-1.png";
+import coffee from "../assets/coffee.png";
+import livestock from "../assets/livestock.png";
+import pulses from "../assets/pulses.png";
+import oil from "../assets/oil.png";
+import spices from "../assets/spices.png";
 import orangeChangan from "../assets/orange-changan.png";
 import office from "../assets/pactzion-office.png";
 import rsBuilding from "../assets/rs-building.png";
@@ -193,7 +199,10 @@ import rsBuilding from "../assets/rs-building.png";
 
     <section class="what-we-do-section">
       <div class="container wrapper">
-        <p class="section-label fs-" style="color: rgba(255, 255, 255, 0.72);">
+        <p
+          class="section-label fs-"
+          style="color: rgba(255, 255, 255, 0.72); text-align: left;"
+        >
           What we do
         </p>
         <h2 class="fs-secondary-header fw-semi-bold-100">
@@ -205,7 +214,7 @@ import rsBuilding from "../assets/rs-building.png";
       </div>
     </section>
 
-    <section class="business-portfolio">
+    <section class="business-portfolio import-section">
       <div class="container wrapper">
         <p class="section-label fs-secondary-header fw-semi-bold-100">
           Business Portfolio
@@ -264,6 +273,47 @@ import rsBuilding from "../assets/rs-building.png";
 
           <div class="swiper-pagination"></div>
         </div>
+      </div>
+    </section>
+
+    <section class="business-portfolio export-section">
+      <div class="container wrapper">
+        <h2 class="fs-secondary-header fw-semi-bold-200 text-center">
+          Export items
+        </h2>
+
+        <ul class="export-items-grid" role="list">
+          <ExportCard
+            class="export-item"
+            bgImg={coffee.src}
+            itemName="Coffee"
+            url="/"
+          />
+          <ExportCard
+            class="export-item"
+            bgImg={spices.src}
+            itemName="Spices"
+            url="/"
+          />
+          <ExportCard
+            class="export-item"
+            bgImg={oil.src}
+            itemName="Oil Seeds"
+            url="/"
+          />
+          <ExportCard
+            class="export-item"
+            bgImg={livestock.src}
+            itemName="Livestock"
+            url="/"
+          />
+          <ExportCard
+            class="export-item"
+            bgImg={pulses.src}
+            itemName="Pulses"
+            url="/"
+          />
+        </ul>
       </div>
     </section>
   </main>

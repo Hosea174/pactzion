@@ -392,7 +392,7 @@
   }
 }
 
-.business-portfolio {
+.business-portfolio.import-section {
   .wrapper {
     padding-block: $size-900;
 
@@ -402,7 +402,7 @@
 
     .swiper {
       --swiper-theme-color: #fff;
-      
+
       cursor: move;
       cursor: grab;
       cursor: -moz-grab;
@@ -444,6 +444,7 @@
       .business-info {
         max-width: 400px;
         color: $clr-neutral-100;
+
         p {
           margin-block: $size-200 $size-600;
         }
@@ -523,3 +524,64 @@
     }
   }
 }
+
+.business-portfolio.export-section {
+  .wrapper {
+    padding-block-end: $size-900;
+
+    h2 {
+      margin-block: $size-600 $size-800;
+    }
+
+    .export-items-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 350px);
+      gap: 20px;
+
+      &>*:nth-child(-n+3) {
+        grid-column: span 2;
+      }
+
+      &>*:nth-child(n+4) {
+        grid-column: span 3;
+      }
+
+      .export-item {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        position: relative;
+
+      }
+
+    }
+
+    @media (max-width: 1000px) {
+      .export-items-grid {
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        gap: 20px;
+
+        &>*:nth-child(-n+5) {
+          grid-column: span 1;
+        }
+
+        &>*:nth-last-child(1) {
+          grid-column: 1 / -1;
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+/* Responsive layout */

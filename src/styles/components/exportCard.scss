@@ -1,0 +1,40 @@
+@import "../resets";
+@import "../global";
+
+.export-item {
+	overflow: hidden;
+	padding: 2rem;
+
+	.circle {
+		// clip-path: circle(100%);
+		position: absolute;
+		left: -10.5rem;
+		bottom: -10rem;
+		aspect-ratio: 1 !important;
+		clip-path: circle(5%);
+		transition: clip-path .5s ease;
+		width: clamp(200px, 34vw, 400px);
+		border-radius: 50%;
+		background-color: $clr-primary-300;
+		
+		.clip-wrap {
+			display: flex;
+			position: absolute;
+			left: 14rem;
+			bottom: 11rem;
+			text-wrap: nowrap;
+			z-index: 2;
+			transition: all .5s ease;
+		}
+
+	}
+
+	&:hover .circle {
+		clip-path: circle(100%);
+
+		.clip-wrap {
+			left: 12rem;
+			bottom: 11.2rem;
+		}
+	}
+}
