@@ -401,6 +401,8 @@
     }
 
     .swiper {
+      --swiper-theme-color: #fff;
+      
       cursor: move;
       cursor: grab;
       cursor: -moz-grab;
@@ -416,7 +418,6 @@
     .portfolio-card {
       padding: 4.675rem 2.1875rem;
       border-radius: 20px;
-      height: 600px;
       position: relative;
       max-width: 1200px;
 
@@ -443,13 +444,82 @@
       .business-info {
         max-width: 400px;
         color: $clr-neutral-100;
-
         p {
           margin-block: $size-200 $size-600;
         }
-
       }
     }
 
+    @media screen and (min-width: 1000px) {
+      .portfolio-card {
+        height: 600px;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .portfolio-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 670px;
+
+        &.card-car .card-img {
+          margin-inline-start: auto;
+        }
+
+        .card-img {
+          position: static;
+        }
+
+        &.card-rs {
+          justify-content: space-between;
+          padding-right: 0;
+          padding-bottom: 0;
+          overflow: hidden;
+
+          .card-img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 680px) {
+      .portfolio-card {
+        height: 580px;
+        gap: 3rem;
+        justify-content: start;
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      .portfolio-card {
+        height: 500px;
+        padding: 2.5rem .585rem;
+
+        .business-info {
+          padding-inline: 1rem;
+
+          p {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .portfolio-card {
+        height: 450px;
+        padding: 2.5rem .585rem;
+
+        .business-info {
+          padding-inline: 1rem;
+
+          p {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
   }
 }
