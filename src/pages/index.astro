@@ -16,6 +16,9 @@ import growthIcon from "../assets/icons/growth.svg";
 import inIcon from "../assets/icons/in-icon.svg";
 import jobIcon from "../assets/icons/jobs.svg";
 import line from "../assets/icons/line.svg";
+import locationIcon from "../assets/icons/location-icon.svg";
+import mailIcon from "../assets/icons/mail-icon.svg";
+import phoneIcon from "../assets/icons/phone-icon.svg";
 import ytIcon from "../assets/icons/yt-icon.svg";
 
 // Image asset imports
@@ -36,6 +39,7 @@ import morLogo from "../assets/partner-logos/mor.png";
 import pulses from "../assets/pulses.png";
 import rsBuilding from "../assets/rs-building.png";
 import spices from "../assets/spices.png";
+import worldMap from "../assets/world-map.svg";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
@@ -368,13 +372,100 @@ import spices from "../assets/spices.png";
       </div>
     </section>
 
-    <!-- <section class="work-areas-section">
+    <section class="work-areas-section">
+      <div class="container wrapper text-center">
+        <p class="section-label fs-secondary-header fw-semi-bold-100">
+          Where we operate
+        </p>
+        <h2 class="fs-secondary-header fw-semi-bold-200">
+          A world of Possibilities, beyond borders.
+        </h2>
+        <p class="work-area-text">
+          Behind the scenes, our global partnerships are the driving force,
+          turning challenges into shared successes worldwide.
+        </p>
+        <img src={worldMap.src} alt="Where we operate" class="world-map" />
+      </div>
+    </section>
+
+    <section class="cta-section">
       <div class="container wrapper">
         <p class="section-label fs-secondary-header fw-semi-bold-100">
-          Where we work
+          Let's work together
         </p>
-        <h2 class="fs-secondary-header fw-semi-bold-200 text-center"></h2>
+        <h2 class="fs-secondary-header fw-semi-bold-100">
+          Ready to bring a positive change to the world? Join us in shaping a
+          global trade landscape that stands out. Your journey with PactZion
+          awaits!
+        </h2>
+        <Button class="btn-primary" text="Join the Movement" />
       </div>
-    </section> -->
+    </section>
+
+    <section class="contact-section">
+      <div class="container wrapper">
+        <div class="contact-box">
+          <div class="contact-form">
+            <p class="section-label fs-secondary-header fw-semi-bold-100">
+              Let's talk!
+            </p>
+            <h2 class="fs-secondary-header fw-semi-bold-100">
+              Come visit us at our office or write us an email.
+            </h2>
+
+            <form action="POST">
+              <div class="contact-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" required />
+              </div>
+
+              <div class="contact-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" required />
+              </div>
+
+              <div class="contact-field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="7"
+                ></textarea>
+              </div>
+
+              <Button class="btn-primary submit" text="Send Message" />
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="contact-details">
+              <div class="contact-detail">
+                <img
+                  src={mailIcon.src}
+                  alt=""
+                  class="contact-icon"
+                  width="25px"
+                />
+                <p class="info">info@pactzion.com</p>
+              </div>
+              <div class="contact-detail">
+                <img
+                  src={locationIcon.src}
+                  alt=""
+                  class="contact-icon"
+                  width="25px"
+                />
+                <p class="info">Bloom Tower, ECA Road, Addis Ababa, Ethiopia</p>
+              </div>
+              <div class="contact-detail">
+                <img
+                  src={phoneIcon.src}
+                  alt=""
+                  class="contact-icon"
+                  width="25px"
+                />
+                <p class="info">+251 91 234 5678 | +251 91 170 7713</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
