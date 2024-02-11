@@ -32,3 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+var copy = document.querySelector(".logos-slider-wrapper").cloneNode(true);
+document.querySelector(".partners-logo").appendChild(copy);

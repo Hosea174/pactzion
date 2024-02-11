@@ -1,8 +1,8 @@
 ---
 // Component imports
 import Button from "../components/Button.astro";
-import Header from "../components/Header.astro";
 import ExportCard from "../components/ExportCard.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Stylesheet imports
@@ -22,12 +22,20 @@ import ytIcon from "../assets/icons/yt-icon.svg";
 import car1 from "../assets/car-1.png";
 import coffee from "../assets/coffee.png";
 import livestock from "../assets/livestock.png";
-import pulses from "../assets/pulses.png";
 import oil from "../assets/oil.png";
-import spices from "../assets/spices.png";
 import orangeChangan from "../assets/orange-changan.png";
 import office from "../assets/pactzion-office.png";
+import aacLogo from "../assets/partner-logos/AAC.png";
+import aaccbaLogo from "../assets/partner-logos/AACCBA.png";
+import boaLogo from "../assets/partner-logos/BOA.png";
+import ecaLogo from "../assets/partner-logos/ECA.png";
+import ecxLogo from "../assets/partner-logos/ECX.png";
+import etLogo from "../assets/partner-logos/ET.png";
+import ahaduLogo from "../assets/partner-logos/ahadu.png";
+import morLogo from "../assets/partner-logos/mor.png";
+import pulses from "../assets/pulses.png";
 import rsBuilding from "../assets/rs-building.png";
+import spices from "../assets/spices.png";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
@@ -316,5 +324,57 @@ import rsBuilding from "../assets/rs-building.png";
         </ul>
       </div>
     </section>
+
+    <section class="partners-section">
+      <div class="container">
+        <div class="wrapper">
+          <p class="section-label fs-secondary-header fw-semi-bold-100">
+            Partners
+          </p>
+          <h3 class="fs-tertiary-header fw-semi-bold-100 text-center">
+            We've partnered with industry giants to redefine standards and drive
+            economic empowerment.
+          </h3>
+
+          <div class="partners-logo">
+            <ul class="logos-slider-wrapper" role="list">
+              <li class="company-logo">
+                <img src={ahaduLogo.src} alt="Ahadu logo" />
+              </li>
+              <li class="company-logo">
+                <img src={boaLogo.src} alt="BoA logo" />
+              </li>
+              <li class="company-logo">
+                <img src={ecaLogo.src} alt="ECA logo" />
+              </li>
+              <li class="company-logo">
+                <img src={aacLogo.src} alt="AAC logo" />
+              </li>
+              <li class="company-logo">
+                <img src={ecxLogo.src} alt="ECX logo" />
+              </li>
+              <li class="company-logo">
+                <img src={etLogo.src} alt="ET logo" />
+              </li>
+              <li class="company-logo">
+                <img src={morLogo.src} alt="MOR logo" />
+              </li>
+              <li class="company-logo">
+                <img src={aaccbaLogo.src} alt="AACCBA logo" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="work-areas-section">
+      <div class="container wrapper">
+        <p class="section-label fs-secondary-header fw-semi-bold-100">
+          Where we work
+        </p>
+        <h2 class="fs-secondary-header fw-semi-bold-200 text-center"></h2>
+      </div>
+    </section> -->
   </main>
 </Layout>

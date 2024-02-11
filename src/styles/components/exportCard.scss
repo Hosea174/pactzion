@@ -6,35 +6,53 @@
 	padding: 2rem;
 
 	.circle {
-		// clip-path: circle(100%);
 		position: absolute;
-		left: -10.5rem;
+		left: -10rem;
 		bottom: -10rem;
 		aspect-ratio: 1 !important;
 		clip-path: circle(5%);
 		transition: clip-path .5s ease;
-		width: clamp(200px, 34vw, 400px);
+		width: 380px;
 		border-radius: 50%;
 		background-color: $clr-primary-300;
-		
+
 		.clip-wrap {
 			display: flex;
 			position: absolute;
 			left: 14rem;
 			bottom: 11rem;
-			text-wrap: nowrap;
+			width: 250px;
 			z-index: 2;
 			transition: all .5s ease;
 		}
 
+
 	}
 
-	&:hover .circle {
-		clip-path: circle(100%);
+	@media (min-width: 768px) {
+		&:hover .circle {
+			clip-path: circle(100%);
 
-		.clip-wrap {
-			left: 12rem;
-			bottom: 11.2rem;
+			.clip-wrap {
+				left: 12rem;
+				bottom: 11.2rem;
+			}
 		}
 	}
+
+	@media (max-width: 768px) {
+		.circle {
+			width: 320px;
+			clip-path: circle(100%);
+			left: -8rem;
+			bottom: -12rem;
+
+			.clip-wrap {
+				left: 10rem;
+				bottom: 13rem;
+			}
+		}
+	}
+
+
 }
