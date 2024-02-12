@@ -2,8 +2,8 @@
 // Component imports
 import Button from "../components/Button.astro";
 import ExportCard from "../components/ExportCard.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Stylesheet imports
@@ -25,6 +25,8 @@ import ytIcon from "../assets/icons/yt-icon.svg";
 // Image asset imports
 import car1 from "../assets/car-1.png";
 import coffee from "../assets/coffee.png";
+import car4 from "../assets/eado.png";
+import car2 from "../assets/estar.png";
 import livestock from "../assets/livestock.png";
 import oil from "../assets/oil.png";
 import orangeChangan from "../assets/orange-changan.png";
@@ -39,6 +41,7 @@ import ahaduLogo from "../assets/partner-logos/ahadu.png";
 import morLogo from "../assets/partner-logos/mor.png";
 import pulses from "../assets/pulses.png";
 import rsBuilding from "../assets/rs-building.png";
+import car3 from "../assets/sl3.png";
 import spices from "../assets/spices.png";
 import worldMap from "../assets/world-map.svg";
 ---
@@ -54,15 +57,44 @@ import worldMap from "../assets/world-map.svg";
           <img src={featuredIcon.src} alt="" />
           <span>Featured Product</span>
         </div>
-        <div class="car-text-box">
+        <div class="car-text-box carousel swiper">
           <h1 class="fs-primary-header">CHANGAN</h1>
-          <div class="img-wrapper">
-            <img
-              class="hero-car"
-              src={car1.src}
-              alt="Changan Deppal S7"
-              width="680"
-            />
+          <div class="img-wrapper swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="hero-car d-s7"
+                src={car1.src}
+                alt="Changan Deppal S7"
+                width="680"
+              />
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="hero-car d-estar"
+                src={car2.src}
+                alt="Changan Estar"
+                width="680"
+              />
+            </div>
+
+            <div class="swiper-slide d-sl3">
+              <img
+                class="hero-car"
+                src={car3.src}
+                alt="Changan Deppal Sl3"
+                width="680"
+              />
+            </div>
+
+            <div class="swiper-slide d-eado">
+              <img
+                class="hero-car"
+                src={car4.src}
+                alt="Changan Eado"
+                width="680"
+              />
+            </div>
           </div>
         </div>
 
@@ -237,7 +269,7 @@ import worldMap from "../assets/world-map.svg";
         </h2>
 
         <!-- Slider main container -->
-        <div class="swiper">
+        <div class="swiper swiper-portfolio">
           <div class="swiper-wrapper portfolio-wrapper">
             <div class="swiper-slide portfolio-card card-car">
               <div class="business-info">
