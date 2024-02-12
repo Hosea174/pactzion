@@ -16,10 +16,9 @@
 }
 
 // Primary colors
-$clr-primary-500: #16425B;
-// $clr-primary-400: #2CBAF6;
-$clr-primary-400: #21acc9;
-$clr-primary-300: #AFD9E1;
+$clr-primary-500: #2E2921;
+$clr-primary-400: #d59940;
+$clr-primary-300: #FAE2BF;
 
 // Accent colors
 $clr-accent-car: #366166;
@@ -28,8 +27,7 @@ $clr-accent-rs: #906c58;
 
 // Neutral colors
 $clr-neutral-900: #00171F;
-// $clr-neutral-800: #272D32;
-$clr-neutral-800: #262940;
+$clr-neutral-800: #132552;
 $clr-neutral-700: #F9FAFC;
 $clr-neutral-300: #DCDCDC;
 $clr-neutral-100: #FFFFFF;
@@ -147,7 +145,7 @@ $size-900: 5rem;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -156,14 +154,14 @@ $size-900: 5rem;
 
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background: #87ceeb;
+  background: #ebc187;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4682b4;
+  background: #b46d46;
 }
 
 ::selection {
-  background-color: #87ceeb;
+  background-color: #ebc187;
   color: $clr-neutral-900;
 }

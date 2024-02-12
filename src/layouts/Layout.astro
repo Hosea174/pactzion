@@ -4,7 +4,7 @@ interface Props {
   title: string;
   description?: string;
 }
-
+import favicon from "../../public/favicon.svg"
 const { title, description } = Astro.props;
 ---
 
@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/src/assets/icons/favicon.svg"
+      href={favicon.src}
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
