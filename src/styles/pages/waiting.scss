@@ -1,0 +1,71 @@
+@import "../global";
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("../../assets/about-hero-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $clr-neutral-100;
+
+    .wrapper {
+        margin-inline: auto;
+        padding-top: 12rem;
+        text-align: center;
+
+        * {
+            margin-inline: auto;
+        }
+
+        h1 {
+            max-width: 750px;
+        }
+
+        p {
+            font-weight: 500;
+            max-width: 450px;
+            margin-block: 1rem 2.6rem;
+        }
+
+        .hero-label {
+            display: inline-block;
+            margin-block-end: 1.6rem;
+            color: rgba(0, 18, 26, 0.793);
+            padding: .4rem 1.6rem;
+            border-radius: 100px 0px;
+            background: rgba(238, 253, 248, 0.63);
+            backdrop-filter: blur(10px);
+        }
+
+    }
+
+    .hero-socials {
+        margin-top: 100px;
+        display: flex;
+        gap: $size-300;
+        justify-content: center;
+        .social-links {
+            // flex-direction: column;
+            display: flex;
+            gap: $size-400;
+        }
+    }
+
+    @media screen and (max-width: 630px) {
+        .wrapper {
+            h1 {
+                line-height: 95%;
+            }
+
+            .hero-label {
+                font-size: 0.875rem;
+            }
+
+            p {
+                font-size: 1rem;
+                max-width: 350px;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
 .hero-section {
   // min-height: 100vh;
   max-height: 830px;
-  background-image: url("../../assets/hero-bg-dk.png");
+  background-image: url("../../assets/hero-bg-dk.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -177,7 +177,7 @@
 
 @media screen and (max-width: 650px) {
   .hero-section {
-    background-image: url("../../assets/hero-bg-mb.png");
+    background-image: url("../../assets/hero-bg-mb.webp");
 
     .wrapper {
       margin-block: 0;
@@ -392,7 +392,7 @@
 
 
 .what-we-do-section {
-  background-image: url("../../assets/orange-bg.png");
+  background-image: url("../../assets/orange-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -782,7 +782,7 @@
       }
 
       .contact-info {
-        background-image: url("../../assets/signage.png");
+        background-image: url("../../assets/signage.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
