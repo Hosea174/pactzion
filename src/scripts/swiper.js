@@ -15,7 +15,7 @@ const swiper = new Swiper(".swiper-portfolio", {
 
 const carousel = new Swiper(".carousel", {
   slidesPerView: "1",
-  // modules: [Autoplay],
+  modules: [Autoplay],
   loop: true,
   autoplay: { delay: 2000 },
   speed: 700,

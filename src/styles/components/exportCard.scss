@@ -12,15 +12,17 @@
 		aspect-ratio: 1 !important;
 		clip-path: circle(5%);
 		transition: clip-path .5s ease;
-		width: 380px;
+		width: 400px;
 		border-radius: 50%;
 		background-color: $clr-primary-300;
 
 		.clip-wrap {
-			display: flex;
 			position: absolute;
 			left: 14rem;
 			bottom: 11rem;
+			display: flex;
+			align-items: center;
+			gap: 7px;
 			width: 250px;
 			z-index: 2;
 			transition: all .5s ease;
@@ -42,9 +44,9 @@
 
 	@media (max-width: 768px) {
 		.circle {
-			width: 320px;
+			width: 330px;
 			clip-path: circle(100%);
-			left: -8rem;
+			left: -9rem;
 			bottom: -12rem;
 
 			.clip-wrap {

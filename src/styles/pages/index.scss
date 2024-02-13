@@ -80,22 +80,10 @@
           justify-content: center;
           // margin-top: 3rem;
 
-          img {
+          .hero-car {
             position: relative;
             transform: translateY(15%);
-
-            &.d-s7,
-            &.d-eado {
-              width: clamp(21.875rem, 15.063073394495412rem + 30.275229357798167vw, 42.5rem);
-            }
-
-            &.d-estar {
-              width: clamp(21.875rem, 15.063073394495412rem + 35.275229357798167vw, 50rem);
-            }
-
-            &.d-sl3 {
-              width: clamp(21.875rem, 20.063073394495412rem + 40.275229357798167vw, 70rem);
-            }
+            width: clamp(21.875rem, 15.063073394495412rem + 30.275229357798167vw, 42.5rem);
           }
         }
       }
@@ -176,7 +164,7 @@
       }
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       .car-text-box {
         h1 {
           bottom: 32%;

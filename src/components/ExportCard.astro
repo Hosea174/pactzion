@@ -2,6 +2,9 @@
 // Component imports
 import "../styles/components/exportCard.scss";
 
+// icon imports
+import openTab from "../assets/icons/open-tab.svg";
+
 const { bgImg, itemName, url, class: className } = Astro.props;
 
 interface Props {
@@ -19,9 +22,10 @@ interface Props {
   >
     <div class="circle">
       <div class="clip-wrap">
-        <h3 class="fs-tertiary-header fw-semi-bold-200">{itemName}
-        <span><img src="" alt=""></span>
+        <h3 class="fs-tertiary-header fw-semi-bold-200">
+          {itemName}
         </h3>
+        <span><img src={openTab.src} alt="" width="30px" /></span>
       </div>
     </div>
   </li>

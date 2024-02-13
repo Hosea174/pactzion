@@ -20,11 +20,6 @@ $clr-primary-500: #2E2921;
 $clr-primary-400: #d59940;
 $clr-primary-300: #FAE2BF;
 
-// Accent colors
-$clr-accent-car: #366166;
-$clr-accent-coffee: #b55d41;
-$clr-accent-rs: #906c58;
-
 // Neutral colors
 $clr-neutral-900: #00171F;
 $clr-neutral-800: #132552;
@@ -74,7 +69,7 @@ $size-900: 5rem;
 // Utility classes
 .container {
   max-width: 1450px;
-  padding-inline: $size-400;
+  padding-inline: $size-300;
   margin: 0 auto;
 }
 
@@ -101,7 +96,7 @@ $size-900: 5rem;
 .fs-primary-header {
   text-transform: capitalize;
   font-family: $ff-header;
-  font-size: clamp(3rem, 0.45412844036697253rem + 9.98165137614679vw, 9.5rem);
+  font-size: clamp(2.9rem, 0.45412844036697253rem + 9.98165137614679vw, 9.5rem);
   line-height: 100%;
   color: $clr-neutral-100;
   letter-spacing: -1.6px;
@@ -111,8 +106,6 @@ $size-900: 5rem;
 .fs-secondary-header {
   font-family: $ff-body;
   font-size: clamp(1.5rem, 1.1284403669724772rem + 1.651376146788991vw, 2.625rem);
-  // font-size: clamp(2.2rem, 1.1674311926605505rem + 0.3669724770642202vw, 4rem);
-  // font-size: clamp(1.5rem, 1.0871559633027523rem + 1.834862385321101vw, 2.75rem);
   line-height: 100%;
 }
 
