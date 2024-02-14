@@ -568,11 +568,17 @@
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100%;
         background-position: center;
         border-radius: 15px;
         position: relative;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-size: 110%;
+        }
       }
+
 
     }
 

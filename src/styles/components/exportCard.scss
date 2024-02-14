@@ -12,13 +12,13 @@
 		aspect-ratio: 1 !important;
 		clip-path: circle(5%);
 		transition: clip-path .5s ease;
-		width: 400px;
+		width: 420px;
 		border-radius: 50%;
 		background-color: $clr-primary-300;
 
 		.clip-wrap {
 			position: absolute;
-			left: 14rem;
+			left: 14.4rem;
 			bottom: 11rem;
 			display: flex;
 			align-items: center;
@@ -37,7 +37,7 @@
 
 			.clip-wrap {
 				left: 12rem;
-				bottom: 11.2rem;
+				bottom: 11.4rem;
 			}
 		}
 	}
@@ -58,3 +58,4 @@
 
 
 }
+

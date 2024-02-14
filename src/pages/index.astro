@@ -38,7 +38,7 @@ import ecaLogo from "../assets/partner-logos/ECA.png";
 import ecxLogo from "../assets/partner-logos/ECX.png";
 import etLogo from "../assets/partner-logos/ET.png";
 import ahaduLogo from "../assets/partner-logos/ahadu.png";
-// import morLogo from "../assets/partner-logos/mor.png";
+import morLogo from "../assets/partner-logos/mor.png";
 import pulses from "../assets/pulses.webp";
 import rsBuilding from "../assets/rs-building.png";
 import car3 from "../assets/sl3.png";
@@ -132,7 +132,7 @@ import worldMap from "../assets/world-map.svg";
             <h2 class="fs-secondary-header fw-semi-bold-100">
               Effortless Elegance on Every Road.
             </h2>
-            <Button class="btn-primary" text="Explore Changan" />
+            <a href="/waiting"><Button class="btn-primary" text="Explore Changan" /></a>
           </div>
           <div class="pactzion-info">
             <p>
@@ -203,7 +203,7 @@ import worldMap from "../assets/world-map.svg";
                     <p class="fw-semi-bold-200">Creating job opportunities</p>
                   </li>
                 </ul>
-                <Button class="btn-primary" text="Our Mission" />
+                <a href="/waiting"><Button class="btn-primary" text="Our Mission" /></a>
               </div>
             </div>
             <div class="abt-right">
@@ -235,7 +235,7 @@ import worldMap from "../assets/world-map.svg";
                 journey.
               </p>
 
-              <Button class="btn-tertiary btn-dark" text="Contact Us" />
+              <a href="/waiting"><Button class="btn-tertiary btn-dark" text="Contact Us" /></a>
             </div>
           </div>
         </div>
@@ -280,10 +280,12 @@ import worldMap from "../assets/world-map.svg";
                   Your journey, our innovation. Explore a world of Changan
                   Electric Vehicles
                 </p>
-                <Button
-                  text="Drive The Future"
-                  class="nav-button | btn-tertiary btn-white"
-                />
+                <a href="/waiting">
+                  <Button
+                    text="Drive The Future"
+                    class="nav-button | btn-tertiary btn-white"
+                  />
+                </a>
               </div>
 
               <img
@@ -301,10 +303,12 @@ import worldMap from "../assets/world-map.svg";
                   Transforming spaces into homes. Explore our real estate
                   offerings that redefine modern living with style and comfort.
                 </p>
-                <Button
-                  text="Live Your Dream"
-                  class="nav-button | btn-tertiary btn-white"
-                />
+                <a href="/waiting">
+                  <Button
+                    text="Live Your Dream"
+                    class="nav-button | btn-tertiary btn-white"
+                  />
+                </a>
               </div>
 
               <img
@@ -332,31 +336,31 @@ import worldMap from "../assets/world-map.svg";
             class="export-item"
             bgImg={coffee.src}
             itemName="Coffee"
-            url="/"
+            url="/waiting"
           />
           <ExportCard
             class="export-item"
             bgImg={spices.src}
             itemName="Spices"
-            url="/"
+            url="/waiting"
           />
           <ExportCard
             class="export-item"
             bgImg={oil.src}
             itemName="Oil Seeds"
-            url="/"
+            url="/waiting"
           />
           <ExportCard
             class="export-item"
             bgImg={livestock.src}
             itemName="Livestock"
-            url="/"
+            url="/waiting"
           />
           <ExportCard
             class="export-item"
             bgImg={pulses.src}
             itemName="Pulses"
-            url="/"
+            url="/waiting"
           />
         </ul>
       </div>
@@ -393,9 +397,9 @@ import worldMap from "../assets/world-map.svg";
               <li class="company-logo">
                 <img src={etLogo.src} alt="ET logo" />
               </li>
-              <!-- <li class="company-logo">
+              <li class="company-logo">
                 <img src={morLogo.src} alt="MOR logo" />
-              </li> -->
+              </li>
               <li class="company-logo">
                 <img src={aaccbaLogo.src} alt="AACCBA logo" />
               </li>
