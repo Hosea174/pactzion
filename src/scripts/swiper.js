@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const swiper = new Swiper(".swiper-portfolio", {
   slidesPerView: "auto",
