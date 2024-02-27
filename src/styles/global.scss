@@ -96,8 +96,8 @@ $size-900: 5rem;
 .fs-primary-header {
   text-transform: capitalize;
   font-family: $ff-header;
-  font-size: clamp(2.9rem, 0.45412844036697253rem + 9.98165137614679vw, 9.5rem);
-  line-height: 100%;
+  font-size: clamp(2.7rem, 0.45412844036697253rem + 9.98165137614679vw, 9.5rem);
+  line-height: auto;
   color: $clr-neutral-100;
   letter-spacing: -1.6px;
   text-shadow: 0px 4px 12.4px rgba(0, 0, 0, 0.11);

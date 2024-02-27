@@ -12,7 +12,9 @@
   "dependencies": {
     "astro": "^4.0.9",
     "esbuild": "^0.20.1",
+    "gsap": "^3.12.5",
     "ngrok": "^5.0.0-beta.2",
+    "split-type": "^0.3.4",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

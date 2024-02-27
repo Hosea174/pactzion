@@ -1,3 +1,30 @@
+import { gsap } from "gsap";
+import SplitType from "split-type";
+
+const text = new SplitType("h1");
+const textOverlay = new SplitType(".overlay");
+const tl = gsap.timeline();
+
+gsap.to(".overlay .char", {
+  y: 0,
+  stagger: 0.05,
+  delay: 0.2,
+  duration: 0.1,
+});
+
+gsap.to("h1 .char", {
+  y: 0,
+  stagger: 0.05,
+  delay: 0.2,
+  duration: 0.1,
+});
+
+const imgs = document.querySelectorAll(".img-wrapper");
+gsap.from(imgs, {
+  y: -10,
+  delay: 0.6,
+});
+
 const navToggler = document.querySelector(".nav-toggler");
 const navMenu = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".navbar a");
@@ -22,8 +49,6 @@ function navLinkClick() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop(); // Get the current page
-  console.log("currentPage: ");
-  console.log(currentPage);
   const links = document.querySelectorAll("nav li a");
   links.forEach((link) => {
     const linkPage = link.getAttribute("data-page");
