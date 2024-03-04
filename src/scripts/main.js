@@ -115,9 +115,13 @@ function startLoader() {
   ]);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+  // const loaderWrapper = document.querySelector(".loader");
   setTimeout(() => {
     startLoader();
+    // setTimeout(() => {
+    //   loaderWrapper.style.display = "none";
+    // }, 1000);
   }, 1000);
 });
 
