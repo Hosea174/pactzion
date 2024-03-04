@@ -114,12 +114,13 @@ function startLoader() {
     }),
   ]);
 }
+startLoader();
 
-window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    startLoader();
-  }, 1000);
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   setTimeout(() => {
+//     startLoader();
+//   }, 1000);
+// });
 
 // gsap.registerPlugin(ScrollTrigger);
 // gsap.from(".about-card", {
