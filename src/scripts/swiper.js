@@ -17,6 +17,6 @@ const carousel = new Swiper(".carousel", {
   slidesPerView: "1",
   modules: [Autoplay],
   loop: true,
-  autoplay: { delay: 2000 },
+  autoplay: { delay: 3000 },
   speed: 700,
 });

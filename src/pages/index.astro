@@ -39,6 +39,7 @@ import etLogo from "../assets/partner-logos/ET.png";
 import ahaduLogo from "../assets/partner-logos/ahadu.png";
 import car1 from "../assets/s7.png";
 // import morLogo from "../assets/partner-logos/mor.png";
+import loaderAnimation from "../assets/loading.json";
 import pulses from "../assets/pulses.webp";
 import rsBuilding from "../assets/rs-building.png";
 import car3 from "../assets/sl3.png";
@@ -47,6 +48,38 @@ import worldMap from "../assets/world-map.svg";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
+  <div class="loader">
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"></script>
+    <dotlottie-player
+      class="loader-animation"
+      src="https://lottie.host/5307332b-9bf6-4903-b142-1d2c5f115918/nP9ScI6byE.lottie"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      direction="1"
+      playMode="normal"
+      loop
+      autoplay
+    >
+    </dotlottie-player>
+
+    <p class="counter">0</p>
+    <div class="loader-overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
   <Header />
 
   <main>
@@ -62,7 +95,7 @@ import worldMap from "../assets/world-map.svg";
             <h1 class="fs-primary-header">CHANGAN</h1>
             <span class="overlay fs-primary-header">CHANGAN</span>
           </div>
-          
+
           <div class="img-wrapper swiper-wrapper">
             <div class="swiper-slide">
               <img
