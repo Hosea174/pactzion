@@ -670,14 +670,16 @@
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
-        background-size: 100%;
         background-position: center;
+        background-size: 130%;
         border-radius: 15px;
         position: relative;
-        transition: all .3s ease-in-out;
+        transition: background-size 0.3s ease-in-out, background-position 0.3s ease-in-out;
+
 
         &:hover {
-          background-size: 110%;
+          background-size: 150%;
+          background-position: center;
         }
       }
 
@@ -934,15 +936,13 @@
   @media (min-width: 800px) {
     .wrapper {
       padding-right: 0;
-      margin-right: 0;
 
       .contact-box {
         grid-template-columns: 1fr 1fr;
 
         .contact-info {
-          border-radius: 20px 0 0 20px;
+          border-radius: 20px;
           height: 100%;
-
         }
       }
     }

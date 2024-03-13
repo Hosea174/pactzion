@@ -1,7 +1,79 @@
 @import "../global";
 
 .hero-section {
-    height: 60vh;
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(108deg, #092A42 0%, #123E5E 100%);
+
+  .hero-wrapper {
     width: 100%;
-    background: linear-gradient(108deg, #092A42 0%, #123E5E 100%);
+    height: 90vh;
+    background-image: url('../../assets/cargos-img.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    .text-wrapper {
+      color: $clr-neutral-100;
+
+      .scroll-link {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 1rem;
+        margin-top: 25px;
+      }
+
+      h1 {
+        max-width: 700px;
+        padding-top: 12rem;
+
+      }
+    }
+  }
+}
+
+.export-items {
+  margin-block: $size-700;
+
+  .wrapper {
+    .tags-filter {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      background-color: #BBD0DC;
+      justify-content: space-between;
+      margin-inline: auto;
+      max-width: 730px;
+      border-radius: 50px;
+      padding: 10px;
+
+      .tag {
+        padding-inline: 1.2rem;
+        color: $clr-neutral-900;
+        background: transparent;
+
+        &.selected {
+          box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.06);
+          background: #FFF;
+        }
+      }
+    }
+
+    .exports-grid {
+      margin-block: $size-700;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 758px) {
+      .tags-filter {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 43px;
+        padding: 1rem;
+        column-gap: 2rem;
+      }
+    }
+  }
+
 }

@@ -1,0 +1,89 @@
+---
+// component imports
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/pages/exports.scss";
+
+// asset imports
+import arrow from "../assets/icons/arrow.svg";
+---
+
+<Layout title="Export Items: Explore our huge collection of export items">
+  <Header />
+
+  <section class="hero-section">
+    <div class="hero-wrapper">
+      <div class="container text-wrapper">
+        <h1 class="fs-secondary-header">
+          Explore premium <span style="font-weight: 600;">Ethiopian</span> exports,
+          delivered worldwide.
+        </h1>
+        <a href="#exports" class="scroll-link">
+          Scroll to view items <img src={arrow.src} alt="" width="35px" />
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="export-items" id="exports">
+    <div class="wrapper container">
+      <div class="tags-filter">
+        <a href="/products/exports/#exports"
+          ><button class="tag" data-page="exports">All Exports</button></a
+        >
+        <a href="/products/exports/pulses/#exports"
+          ><button class="tag" data-page="pulses">Pulses</button></a
+        >
+        <a href="/products/exports/seeds/#exports"
+          ><button class="tag" data-page="seeds">Oil Seeds</button></a
+        >
+        <a href="/products/exports/livestock/#exports"
+          ><button class="tag" data-page="livestock">Livestock</button></a
+        >
+        <a href="/products/exports/coffee/#exports"
+          ><button class="tag" data-page="coffee">Coffee</button></a
+        >
+        <a href="/products/exports/spices/#exports"
+          ><button class="tag" data-page="spices">Spices</button></a
+        >
+      </div>
+
+      <ul class="exports-grid" role="list">
+        <slot />
+      </ul>
+    </div>
+
+    <Footer />
+  </section>
+</Layout>
+
+<style>
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+</style>
+
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    let pages = window.location.pathname.split("/");
+    console.log(pages);
+    const currentPage = pages[pages.length - 2];
+    console.log(currentPage);
+
+    const links = document.querySelectorAll(".tags-filter a button");
+    links.forEach((link) => {
+      const linkPage = link.getAttribute("data-page");
+      if (currentPage === linkPage) {
+        link.classList.add("selected");
+      } else {
+        link.classList.remove("selected");
+      }
+    });
+
+    if (currentPage === "products") {
+      const allExports = document.querySelector('[data-page="exports"]');
+      allExports.classList.add("selected");
+    }
+  });
+</script>

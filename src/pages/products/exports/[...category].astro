@@ -1,0 +1,41 @@
+---
+// component imports
+import ItemCard from "../../../components/ItemCard.astro";
+import ItemsLayout from "../../../layouts/ItemsLayout.astro";
+
+// util imports
+import { slugify } from "../../../scripts/utils";
+
+export async function getStaticPaths() {
+  const items = await Astro.glob("./*.md");
+  const allCats = [...new Set(items.map((item) => item.frontmatter.category))];
+
+  const pages = allCats.map((cat) => {
+    const catPosts = items.filter((item) => item.frontmatter.category === cat);
+    return {
+      params: { category: slugify(cat) },
+      props: {
+        catName: cat,
+        items: catPosts,
+      },
+    };
+  });
+  pages.push({
+    params: { category: undefined },
+    props: {
+      catName: undefined,
+      items: items,
+    },
+  });
+
+  return pages;
+}
+
+const { items, catName } = Astro.props;
+const { category } = Astro.params;
+console.log(category);
+---
+
+<ItemsLayout>
+  {items.map((item) => <ItemCard frontmatter={item.frontmatter} />)}
+</ItemsLayout>

@@ -24,7 +24,7 @@ function navLinkClick() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const currentPage = window.location.pathname.split("/").pop(); // Get the current page
+  const currentPage = window.location.pathname.split("/").pop();
   const links = document.querySelectorAll("nav li a");
   links.forEach((link) => {
     const linkPage = link.getAttribute("data-page");
@@ -116,12 +116,8 @@ function startLoader() {
 }
 
 window.addEventListener("load", () => {
-  // const loaderWrapper = document.querySelector(".loader");
   setTimeout(() => {
     startLoader();
-    // setTimeout(() => {
-    //   loaderWrapper.style.display = "none";
-    // }, 1000);
   }, 1000);
 });
 

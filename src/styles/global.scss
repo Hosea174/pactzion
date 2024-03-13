@@ -106,12 +106,11 @@ $size-900: 5rem;
 .fs-secondary-header {
   font-family: $ff-body;
   font-size: clamp(1.5rem, 1.1284403669724772rem + 1.651376146788991vw, 2.625rem);
-  line-height: 100%;
+  line-height: 115%;
 }
 
 .fs-tertiary-header {
   font-family: $ff-body;
-  // font-size: 1.375rem;
   font-size: clamp(1.375rem, 1.0034403669724772rem + 1.651376146788991vw, 2.5rem);
 }
 

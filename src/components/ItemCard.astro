@@ -1,0 +1,36 @@
+---
+// Component imports
+import { slugify } from "../scripts/utils.js";
+import "../styles/components/ItemCard.scss";
+
+const { frontmatter } = Astro.props;
+
+const itemName = frontmatter.name;
+const bgImg = frontmatter.image.src;
+---
+
+<li class="product export-item">
+  <a
+    href={`/products/exports/${slugify(itemName)}`}
+    class="product-wrapper"
+    style={{ backgroundImage: `url(${bgImg})` }}
+  >
+    <div class="product-text">
+      <h3 class="fw-bold">{itemName}</h3>
+      <span class="details-link fw-bold">
+        View Details
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="9"
+          fill="none"
+        >
+          <path
+            fill="#EA4"
+            d="M15.354 4.854a.5.5 0 0 0 0-.708L12.172.964a.5.5 0 1 0-.708.708L14.293 4.5l-2.829 2.828a.5.5 0 1 0 .708.708l3.182-3.182ZM0 5h15V4H0v1Z"
+          ></path>
+        </svg>
+      </span>
+    </div>
+  </a>
+</li>

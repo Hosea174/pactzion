@@ -7,8 +7,7 @@ footer {
 
     .footer-wrapper {
         position: relative;
-        padding: $size-800 $size-600 $size-100;
-        // height: 300px;
+        padding-block: $size-800 $size-100;
 
         .footer-content {
             display: grid;
