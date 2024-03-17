@@ -20,3 +20,13 @@ const carousel = new Swiper(".carousel", {
   autoplay: { delay: 3000 },
   speed: 700,
 });
+
+const itemsCarousel = new Swiper(".itemsCarousel", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  modules: [Pagination],
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

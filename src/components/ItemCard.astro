@@ -3,13 +3,13 @@
 import { slugify } from "../scripts/utils.js";
 import "../styles/components/ItemCard.scss";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, class: className } = Astro.props;
 
 const itemName = frontmatter.name;
 const bgImg = frontmatter.image.src;
 ---
 
-<li class="product export-item">
+<li class:list={["export-item", "product", className]}>
   <a
     href={`/products/exports/${slugify(itemName)}`}
     class="product-wrapper"

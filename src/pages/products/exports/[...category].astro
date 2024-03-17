@@ -6,7 +6,7 @@ import ItemsLayout from "../../../layouts/ItemsLayout.astro";
 // util imports
 import { slugify } from "../../../scripts/utils";
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ paginate }) {
   const items = await Astro.glob("./*.md");
   const allCats = [...new Set(items.map((item) => item.frontmatter.category))];
 
@@ -39,3 +39,11 @@ console.log(category);
 <ItemsLayout>
   {items.map((item) => <ItemCard frontmatter={item.frontmatter} />)}
 </ItemsLayout>
+
+<!-- 
+ TODO:
+ 1. product page
+ 2. pagination
+ 3. changan page design
+ 4. about page design
+ -->

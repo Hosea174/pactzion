@@ -1,0 +1,129 @@
+---
+// component imports
+import Footer from "../../../components/Footer.astro";
+import Header from "../../../components/Header.astro";
+import Layout from "../../../layouts/Layout.astro";
+import "../../../styles/pages/product.scss";
+
+// asset imports
+import starIcon from "../../../assets/icons/star.svg";
+
+// library imports
+import { slugify } from "../../../scripts/utils";
+import markdownit from "markdown-it";
+import he from "he";
+import Button from "../../../components/Button.astro";
+import ItemCard from "../../../components/ItemCard.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("./*.md");
+
+  return posts.map((post) => {
+    return {
+      params: {
+        slug: slugify(post.frontmatter.name),
+      },
+      props: {
+        post,
+        name: post.frontmatter.name,
+        image: post.frontmatter.image,
+        category: post.frontmatter.category,
+        available: post.frontmatter.available,
+        Content: post.Content,
+        posts: posts,
+      },
+    };
+  });
+}
+
+const { name, category, available, image, Content, post, posts } = Astro.props;
+console.log(posts);
+const md = markdownit();
+const htmlContent = md.render(post.compiledContent());
+const htmlString = he.decode(htmlContent);
+---
+
+<Layout title=`Product page - ${name}`>
+  <Header />
+
+  <section class="product-section">
+    <div class="wrapper container">
+      <div class="navigation-links">
+        <a href="/" class="navigation-link">Home</a> /
+        <a href="/products/exports" class="navigation-link">All Exports</a> /
+        <span style="color: #EEAA44; font-weight: bold;">Product</span>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="product-image"><img src={image.src} alt={image.alt} /></div>
+        <div class="product-detail">
+          <a href=`/products/exports/${category}/#exports` class="category"
+            >{category}</a
+          >
+          <h3 class="product-name fs-tertiary-header fw-semi-bold-100">
+            {name}
+          </h3>
+
+          <div class="product-info">
+            <div class="rating">
+              <img src={starIcon.src} alt="" /><img
+                src={starIcon.src}
+                alt=""
+              /><img src={starIcon.src} alt="" /><img
+                src={starIcon.src}
+                alt=""
+              /><img src={starIcon.src} alt="" />
+            </div>
+            <p
+              class="availability"
+              style={{ color: available ? "#1A9A05" : "#9A0505" }}
+            >
+              {
+                available
+                  ? "(Best quality available in stock)"
+                  : "Not available in stock"
+              }
+            </p>
+          </div>
+          <div class="product-brief">
+            <!-- content injected by js from md file -->
+          </div>
+          <a href="/waiting"
+            ><Button class="btn-primary product-cta" text="Enquire Now" /></a
+          >
+        </div>
+      </div>
+      <!-- content injected by js from md file -->
+      <div class="detailed-description"></div>
+    </div>
+  </section>
+
+  <section class="related-items">
+    <div class="swiper itemsCarousel container">
+      <h2 class="fs-secondary-header fw-semi-bold-200">Similar Items</h2>
+      <ul role="list" class="itemsList swiper-wrapper">
+        {
+          posts.map((post) =>
+            post.frontmatter.category === category &&
+            post.frontmatter.name !== name ? (
+              <ItemCard class="swiper-slide" frontmatter={post.frontmatter} />
+            ) : null
+          )
+        }
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <Footer />
+
+  <script defer define:vars={{ htmlString }}>
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, "text/html");
+    const descriptionBrief = doc.querySelector(".description-brief");
+    const descriptionDetail = doc.querySelector(".description-detail");
+    const brief = window.document.querySelector(".product-brief");
+    brief.innerHTML = descriptionBrief.innerHTML;
+    const detail = window.document.querySelector(".detailed-description");
+    detail.innerHTML = descriptionDetail.innerHTML;
+  </script>
+</Layout>
