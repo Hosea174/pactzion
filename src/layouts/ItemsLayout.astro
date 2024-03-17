@@ -68,7 +68,9 @@ import arrow from "../assets/icons/arrow.svg";
   document.addEventListener("DOMContentLoaded", function () {
     let pages = window.location.pathname.split("/");
     console.log(pages);
-    const currentPage = pages[pages.length - 2];
+    if (pages[pages.length - 1] === "")
+      pages.pop()
+    const currentPage = pages[pages.length - 1];
     console.log(currentPage);
 
     const links = document.querySelectorAll(".tags-filter a button");

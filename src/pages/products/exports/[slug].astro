@@ -93,8 +93,10 @@ const htmlString = he.decode(htmlContent);
           >
         </div>
       </div>
-      <!-- content injected by js from md file -->
-      <div class="detailed-description"></div>
+
+      <div class="detailed-description">
+        <!-- content injected by js from md file -->
+      </div>
     </div>
   </section>
 
@@ -116,7 +118,7 @@ const htmlString = he.decode(htmlContent);
   </section>
   <Footer />
 
-  <script defer define:vars={{ htmlString }}>
+  <script defer define:vars={{ htmlString, category }}>
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, "text/html");
     const descriptionBrief = doc.querySelector(".description-brief");
@@ -124,6 +126,21 @@ const htmlString = he.decode(htmlContent);
     const brief = window.document.querySelector(".product-brief");
     brief.innerHTML = descriptionBrief.innerHTML;
     const detail = window.document.querySelector(".detailed-description");
-    detail.innerHTML = descriptionDetail.innerHTML;
+    if (descriptionDetail === null) {
+      detail.remove();
+    } else {
+      detail.innerHTML = descriptionDetail.innerHTML;
+    }
+
+    const categoryColors = {
+      coffee: "#DBB3A4",
+      livestock: "#A4ADDB",
+      pulses: "#A4DBB3",
+      spices: "#DBA4BE",
+      seeds: "#D0DBA4",
+    };
+
+    const categoryTag = document.querySelector(".category");
+    categoryTag.style.backgroundColor = categoryColors[category];
   </script>
 </Layout>
