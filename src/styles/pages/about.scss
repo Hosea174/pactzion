@@ -1,0 +1,47 @@
+@import "../global";
+
+header .header-wrapper {
+    background: transparent;
+}
+
+.about-hero-section {
+    background-color: #121314;
+
+    .wrapper {
+
+        .hero-header {
+            padding-block: 8rem 13rem;
+            display: flex;
+            justify-content: space-between;
+            color: #F7F7F7;
+            font-size: 18px;
+
+            .headline {
+                h1 {
+                    max-width: 600px;
+                    line-height: 105%;
+                    font-size: 3.5rem;
+                }
+
+                .section-label {
+                    text-align: left;
+                    margin-bottom: $size-400;
+                    color: rgba(252, 252, 252, 0.72);
+                }
+            }
+
+            .subheader {
+                max-width: 500px;
+                height: fit-content;
+                line-height: 165%;
+                padding-inline: 1rem;
+                border-left: 3px solid white;
+                margin-block: $size-600;
+
+                .subheader-title {
+                    margin-bottom: $size-400;
+                }
+            }
+        }
+    }
+}

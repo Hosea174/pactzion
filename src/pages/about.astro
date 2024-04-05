@@ -1,0 +1,38 @@
+---
+// component imports
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/pages/about.scss";
+---
+
+<Layout title="PactZion - About us">
+  <Header />
+  <main>
+    <div class="about-hero-section">
+      <div class="wrapper container">
+        <div class="hero-header">
+          <div class="headline">
+            <p class="section-label">About Us</p>
+            <h1 class="fs-secondary-header fw-semi-bold-100">
+              We are your <span style="color: #EEAA44">trusted</span> trade partner,
+              based in Ethiopia
+            </h1>
+          </div>
+
+          <div class="subheader">
+            <p class="fw-bold subheader-title">
+              PactZion is dedicated to crafting innovative solutions that
+              revolutionize the world of commerce.
+            </p>
+            <p class="subheader-description">
+              With a focus on integrity and innovation, we empower businesses to
+              thrive in the global marketplace, fostering sustainable growth and
+              mutual success
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
