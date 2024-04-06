@@ -1,47 +1,285 @@
 @import "../global";
 
 header .header-wrapper {
-    background: transparent;
+  background: transparent;
 }
 
 .about-hero-section {
-    background-color: #121314;
+  background-color: $clr-neutral-900;
 
-    .wrapper {
+  .wrapper {
+    .hero-header {
+      padding-block: 8rem 16rem;
+      display: flex;
+      justify-content: space-between;
+      color: #F7F7F7;
+      font-size: 18px;
 
-        .hero-header {
-            padding-block: 8rem 13rem;
-            display: flex;
-            justify-content: space-between;
-            color: #F7F7F7;
-            font-size: 18px;
-
-            .headline {
-                h1 {
-                    max-width: 600px;
-                    line-height: 105%;
-                    font-size: 3.5rem;
-                }
-
-                .section-label {
-                    text-align: left;
-                    margin-bottom: $size-400;
-                    color: rgba(252, 252, 252, 0.72);
-                }
-            }
-
-            .subheader {
-                max-width: 500px;
-                height: fit-content;
-                line-height: 165%;
-                padding-inline: 1rem;
-                border-left: 3px solid white;
-                margin-block: $size-600;
-
-                .subheader-title {
-                    margin-bottom: $size-400;
-                }
-            }
+      .headline {
+        h1 {
+          font-size: clamp(1.5rem, 0.8134328358208955rem + 2.9850746268656714vw, 3.5rem);
+          max-width: 600px;
+          line-height: 105%;
         }
+
+        .section-label {
+          text-align: left;
+          margin-bottom: $size-400;
+          color: rgba(252, 252, 252, 0.72);
+        }
+      }
+
+      .subheader {
+        max-width: 500px;
+        height: fit-content;
+        line-height: 165%;
+        padding-inline: 1rem;
+        border-left: 3px solid white;
+        margin: $size-600 $size-500;
+
+        .subheader-title {
+          margin-bottom: $size-400;
+        }
+      }
     }
+  }
+}
+
+.about-img-section {
+  margin-block: -14rem;
+
+  .about-img-box {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .about-pactzion {
+      font-size: 22px;
+      line-height: 140%;
+      max-width: 45%;
+      position: absolute;
+      top: 68%;
+      left: 1rem;
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+    }
+  }
+}
+
+.mission-vision-section {
+  height: 550px;
+  background-image: url("../../assets/digital-world.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-block: 20rem 3rem;
+
+  .wrapper {
+    height: 100%;
+    padding-block: $size-900;
+
+    .boxes-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+
+      .box {
+        position: relative;
+        background-image: url("../../assets/container-shape.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: white;
+        width: 500px;
+        padding: 1rem 2rem;
+        height: 388px;
+
+        h2 {
+          margin-block: 1rem 2.9rem;
+          font-size: 45px;
+        }
+
+        p {
+          line-height: 160%;
+          color: rgba(255, 255, 255, 0.95);
+          font-size: 22px;
+        }
+
+        // border: 2px solid white;
+      }
+
+      .box::after {
+        content: "";
+        position: absolute;
+        top: .5rem;
+        right: 1.5rem;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .mission-box::after {
+        background-image: url("../../assets/icons/mission-icon.svg");
+      }
+
+      .vision-box::after {
+        background-image: url("../../assets/icons/focus-icon.svg");
+      }
+    }
+
+  }
+}
+
+.values-section {
+  margin-block-start: $size-800;
+
+  .wrapper {
+    .values-flex {
+      padding-block-start: $size-700;
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+
+      .img-wrap img {
+        width: 920px;
+      }
+
+      .core-values {
+        margin-bottom: $size-500;
+
+        .value {
+          width: 100%;
+          border-bottom: 1px solid #2E383F;
+          padding: 1.25rem 1rem;
+          cursor: pointer;
+          transition: all ease-in-out .3s;
+
+          .value-title {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: .75rem;
+          }
+
+          .value-description {
+            font-size: 18px;
+            line-height: 165%;
+          }
+        }
+
+        .value:hover {
+          background-color: #121314;
+          color: rgba(255, 255, 255, 0.93);
+
+          &>.value-title path {
+            fill: #fff;
+          }
+        }
+      }
+
+    }
+
+    .structure-diagram {
+      margin: $size-900 auto;
+      background-color: $clr-primary-300;
+      border-radius: 30px;
+
+    }
+  }
+}
+
+.board-members-section {
+  .wrapper {
+    h2 {
+      margin-bottom: $size-600;
+    }
+
+    .board-members {
+      margin-block-end: $size-800;
+
+      .member {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        border: 2px solid black;
+        padding: .8rem 1rem;
+        border-radius: 1rem;
+        background-image: url("../../assets/board-members/john.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .member-content {
+          position: absolute;
+          bottom: 1rem;
+          color: #fff;
+
+          .member-name {
+            font-size: 26px;
+            margin-bottom: .4rem;
+          }
+
+          .member-title {
+            font-size: 18px;
+            opacity: .85;
+          }
+        }
+      }
+
+      .slider-nav {
+        margin-top: $size-500;
+        display: flex;
+        gap: .5rem;
+        justify-content: flex-end;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.about-cta-section {
+  margin-block-end: $size-800;
+
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 7rem 6rem;
+    text-align: center;
+    background-color: $clr-neutral-900;
+    color: white;
+    border-radius: 1.5rem;
+
+    .section-label {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    h2 {
+      margin-block: 1.9rem 2.2rem;
+      line-height: 118%
+    }
+
+    .cta-btn {
+      margin-inline: auto;
+    }
+
+    .blob-1 {
+      position: absolute;
+      bottom: -100%;
+      right: -30%;
+    }
+
+    .blob-2 {
+      position: absolute;
+      top: -100%;
+      left: -30%;
+      transform: rotate(-60deg);
+    }
+  }
 }

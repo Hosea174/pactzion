@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const swiper = new Swiper(".swiper-portfolio", {
   slidesPerView: "auto",
@@ -28,5 +28,15 @@ const itemsCarousel = new Swiper(".itemsCarousel", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+const membersCarousel = new Swiper(".board-members", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  modules: [Navigation],
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

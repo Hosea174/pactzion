@@ -1,0 +1,17 @@
+<svg width="564" height="438" viewBox="0 0 564 438" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b_784_17)">
+<mask id="path-1-inside-1_784_17" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M443 30C443 13.4315 429.569 0 413 0H30C13.4315 0 0 13.4314 0 30V408C0 424.569 13.4315 438 30 438H534C550.569 438 564 424.569 564 408V129C564 112.431 550.569 99 534 99H473C456.431 99 443 85.5685 443 69V30Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M443 30C443 13.4315 429.569 0 413 0H30C13.4315 0 0 13.4314 0 30V408C0 424.569 13.4315 438 30 438H534C550.569 438 564 424.569 564 408V129C564 112.431 550.569 99 534 99H473C456.431 99 443 85.5685 443 69V30Z" fill="#0A0909" fill-opacity="0.22"/>
+<path d="M30 1H413V-1H30V1ZM1 408V30H-1V408H1ZM534 437H30V439H534V437ZM563 129V408H565V129H563ZM534 98H473V100H534V98ZM444 69V30H442V69H444ZM473 98C456.984 98 444 85.0163 444 69H442C442 86.1208 455.879 100 473 100V98ZM565 129C565 111.879 551.121 98 534 98V100C550.016 100 563 112.984 563 129H565ZM534 439C551.121 439 565 425.121 565 408H563C563 424.016 550.016 437 534 437V439ZM-1 408C-1 425.121 12.8792 439 30 439V437C13.9837 437 1 424.016 1 408H-1ZM413 1C429.016 1 442 13.9837 442 30H444C444 12.8792 430.121 -1 413 -1V1ZM30 -1C12.8792 -1 -1 12.8792 -1 30H1C1 13.9837 13.9837 1 30 1V-1Z" fill="white" mask="url(#path-1-inside-1_784_17)"/>
+</g>
+<defs>
+<filter id="filter0_b_784_17" x="-19.8" y="-19.8" width="603.6" height="477.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="9.9"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_784_17"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_784_17" result="shape"/>
+</filter>
+</defs>
+</svg>
