@@ -4,12 +4,17 @@ header .header-wrapper {
   background: transparent;
 }
 
+.fs-secondary-header {
+  font-size: clamp(2rem, 1.1284403669724772rem + 1.651376146788991vw, 2.625rem);
+}
+
 .about-hero-section {
   background-color: $clr-neutral-900;
 
   .wrapper {
     .hero-header {
-      padding-block: 8rem 16rem;
+      padding-block: 8rem;
+      min-height: 75vh;
       display: flex;
       justify-content: space-between;
       color: #F7F7F7;
@@ -17,7 +22,7 @@ header .header-wrapper {
 
       .headline {
         h1 {
-          font-size: clamp(1.5rem, 0.8134328358208955rem + 2.9850746268656714vw, 3.5rem);
+          font-size: clamp(2rem, 0.8134328358208955rem + 2.9850746268656714vw, 3.5rem);
           max-width: 600px;
           line-height: 105%;
         }
@@ -42,11 +47,35 @@ header .header-wrapper {
         }
       }
     }
+
+    @media (max-width: 958px) {
+      .hero-header {
+        flex-direction: column;
+
+        .subheader,
+        .headline h1 {
+          max-width: 100%;
+          margin-inline: 0;
+        }
+
+        // 895px
+        .subheader {
+          font-size: 1rem;
+          margin-block: $size-500 $size-200;
+        }
+      }
+    }
+
+    @media (max-width: 959px) {
+      .hero-header {
+        padding-block: 7rem 14rem;
+      }
+    }
   }
 }
 
 .about-img-section {
-  margin-block: -14rem;
+  margin-block: -10rem;
 
   .about-img-box {
     position: relative;
@@ -58,26 +87,71 @@ header .header-wrapper {
     .about-pactzion {
       font-size: 22px;
       line-height: 140%;
-      max-width: 45%;
+      max-width: 47%;
       position: absolute;
       top: 68%;
       left: 1rem;
 
       p {
         margin-bottom: 1rem;
+        font-size: clamp(1rem, 0.29999999999999993rem + 1.3333333333333335vw, 1.5rem);
       }
 
     }
+
+    @media (max-width: 1225px) {
+      .about-pactzion {
+        line-height: 110%;
+
+        p {
+          margin-bottom: .85rem;
+        }
+      }
+    }
+
+    @media (max-width: 1025px) {
+      .about-pactzion {
+        line-height: 100%;
+        top: 66%;
+
+        p {
+          margin-bottom: .55rem;
+        }
+      }
+    }
+
+    @media (max-width: 895px) {
+      .about-pactzion {
+        line-height: 100%;
+        top: 94%;
+        left: 10%;
+        width: 800px;
+        max-width: 88%;
+
+        p {
+          margin-bottom: 1rem;
+          line-height: 135%;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 895px) {
+  .about-img-section {
+    // margin-block: -11rem;
   }
 }
 
 .mission-vision-section {
-  height: 550px;
+  height: fit-content;
   background-image: url("../../assets/digital-world.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-block: 20rem 3rem;
+  margin-block: 18rem 3rem;
 
   .wrapper {
     height: 100%;
@@ -93,7 +167,7 @@ header .header-wrapper {
         background-repeat: no-repeat;
         background-size: 100%;
         color: white;
-        width: 500px;
+        width: min(500px, 45vw);
         padding: 1rem 2rem;
         height: 388px;
 
@@ -107,8 +181,6 @@ header .header-wrapper {
           color: rgba(255, 255, 255, 0.95);
           font-size: 22px;
         }
-
-        // border: 2px solid white;
       }
 
       .box::after {
@@ -132,25 +204,85 @@ header .header-wrapper {
       }
     }
 
+    @media (max-width: 1020px) {
+      .boxes-wrapper {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+
+        .box {
+          width: min(500px, 95vw);
+        }
+      }
+    }
+
+    @media (max-width: 490px) {
+      .boxes-wrapper {
+        .box {
+          padding: .8rem 1rem;
+
+          h2 {
+            font-size: 2.3rem;
+            margin-block: 0 1rem;
+          }
+
+          p {
+            font-size: 18px;
+          }
+        }
+
+        .box::after {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    @media (max-width: 425px) {
+      .boxes-wrapper .box {
+        height: 320px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .boxes-wrapper .box {
+        height: 300px;
+      }
+    }
+
   }
 }
+
+@media (max-width: 520px) {
+  .mission-vision-section {
+    height: fit-content;
+    background-image: url("../../assets/digital-world-mobile.png");
+    margin-top: 23rem;
+  }
+}
+
 
 .values-section {
   margin-block-start: $size-800;
 
   .wrapper {
     .values-flex {
-      padding-block-start: $size-700;
+      padding-block-start: $size-400;
       display: flex;
-      align-items: center;
-      gap: 3.5rem;
+      align-items: flex-start;
+      gap: 2rem;
 
-      .img-wrap img {
-        width: 920px;
+      .img-wrap {
+        max-width: 620px;
+        flex-shrink: 1;
+        // flex: 1 1 0%;
+        flex: 1;
       }
 
       .core-values {
         margin-bottom: $size-500;
+        flex-shrink: 3;
+        flex: 1 1 0%;
 
         .value {
           width: 100%;
@@ -163,7 +295,7 @@ header .header-wrapper {
             display: flex;
             gap: 10px;
             align-items: center;
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 3vw, 1.5rem);
             font-weight: 600;
             margin-bottom: .75rem;
           }
@@ -190,7 +322,39 @@ header .header-wrapper {
       margin: $size-900 auto;
       background-color: $clr-primary-300;
       border-radius: 30px;
+      padding: 1rem;
+    }
 
+    @media (max-width: 1100px) {
+      .values-flex {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .img-wrap {
+        width: 100%;
+
+        img {
+          width: inherit;
+        }
+      }
+
+      .structure-diagram {
+        margin: $size-700 auto;
+        border-radius: 15px;
+        min-height: 350px;
+        display: flex;
+
+        picture {
+          display: flex;
+
+          img {
+            margin-block: auto;
+          }
+        }
+      }
     }
   }
 }
@@ -247,26 +411,35 @@ header .header-wrapper {
 .about-cta-section {
   margin-block-end: $size-800;
 
-  .wrapper {
+  .wrapper .cta-wrap-box {
     overflow: hidden;
     position: relative;
-    padding: 7rem 6rem;
+    min-height: 430px;
+    padding: 2rem .5rem;
     text-align: center;
     background-color: $clr-neutral-900;
     color: white;
     border-radius: 1.5rem;
+    display: flex;
 
-    .section-label {
-      color: rgba(255, 255, 255, 0.72);
-    }
+    .about-cta-content {
+      max-width: 1000px;
+      margin: auto;
 
-    h2 {
-      margin-block: 1.9rem 2.2rem;
-      line-height: 118%
-    }
+      .section-label {
+        color: rgba(255, 255, 255, 0.72);
+      }
 
-    .cta-btn {
-      margin-inline: auto;
+      h2 {
+        margin-block: 1.9rem 2.2rem;
+        line-height: 118%
+      }
+
+      .cta-btn {
+        margin-inline: auto;
+        position: relative;
+        z-index: 1;
+      }
     }
 
     .blob-1 {
@@ -282,4 +455,33 @@ header .header-wrapper {
       transform: rotate(-60deg);
     }
   }
+
+  @media (max-width: 610px) {
+    .wrapper .cta-wrap-box {
+      padding: 1rem 1.5rem;
+      min-height: 360px;
+
+      .about-cta-content {
+        h2 {
+          font-size: 1.6rem;
+        }
+      }
+
+      .blob-1 {
+        bottom: -40%;
+        right: -30%;
+        opacity: .75;
+      }
+
+      .blob-2 {
+        top: -40%;
+        left: -30%;
+        transform: rotate(-60deg);
+        opacity: .75;
+      }
+    }
+
+  }
+
+
 }

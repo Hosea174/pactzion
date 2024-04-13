@@ -1,17 +1,19 @@
 ---
 // component imports
 import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
 
 import "../styles/pages/about.scss";
 
 // Asset imports
-import aboutImg from "../assets/about-hero.png";
-import companyStructure from "../assets/company-structure.png";
-import valuesImg from "../assets/values-img.png";
+import aboutImgLarge from "../assets/about-hero.png";
+import aboutImgSmall from "../assets/about-hero-small.png";
 import blob from "../assets/blurry-blob.svg";
+import companyStructure from "../assets/company-structure.png";
+import companyStructureMobile from "../assets/company-structure-mobile.png";
+import valuesImg from "../assets/values-img.png";
 ---
 
 <Layout title="PactZion - About us">
@@ -45,7 +47,11 @@ import blob from "../assets/blurry-blob.svg";
 
     <section class="about-img-section">
       <div class="container wrapper | about-img-box">
-        <img src={aboutImg.src} alt="Pactzion staff members" />
+        <picture>
+          <source media="(min-width: 895px)" srcset={aboutImgLarge.src} />
+          <source media="(max-width: 895px)" srcset={aboutImgSmall.src} />
+          <img src={aboutImgSmall.src} alt="Pactzion staff members" />
+        </picture>
         <div class="about-pactzion">
           <p class="about-text fw-bold">
             With a focus on integrity and innovation, we empower businesses to
@@ -80,7 +86,7 @@ import blob from "../assets/blurry-blob.svg";
     </section>
     <section class="values-section">
       <div class="wrapper container">
-        <h2 class="fw-semi-bold-200 fs-secondary-header">Our Core Values</h2>
+        <h2 class="fw-bold fs-secondary-header">Our Core Values</h2>
         <div class="values-flex">
           <div class="img-wrap">
             <img src={valuesImg.src} alt="Pactzion staff members" />
@@ -189,17 +195,22 @@ import blob from "../assets/blurry-blob.svg";
             </div>
           </div>
         </div>
-        <img
-          class="structure-diagram"
-          src={companyStructure.src}
-          alt="Pactzion company structure diagram"
-        />
+        <div class="structure-diagram">
+          <picture>
+            <source media="(min-width: 530px)" srcset={companyStructure.src} />
+            <source
+              media="(max-width: 530px)"
+              srcset={companyStructureMobile.src}
+            />
+            <img src={companyStructure.src} alt="Pactzion staff members" />
+          </picture>
+        </div>
       </div>
     </section>
 
     <section class="board-members-section">
       <div class="wrapper container">
-        <h2 class="fw-semi-bold-200 fs-secondary-header">Board Members</h2>
+        <h2 class="fw-bold fs-secondary-header">Board Members</h2>
 
         <div class="swiper board-members">
           <div class="swiper-wrapper members-wrapper">
@@ -280,14 +291,18 @@ import blob from "../assets/blurry-blob.svg";
 
     <section class="about-cta-section">
       <div class="wrapper container">
-        <p class="section-label">Let’s Work Together!</p>
-        <h2 class="fw-semi-bold-100 fs-secondary-header">
-          Achieve global trade success with PactZion - your trusted partner for
-          international growth.
-        </h2>
-        <Button class="btn-primary cta-btn" text="Contact Us" />
-        <img src={blob.src} class="blob-1" alt="" />
-        <img src={blob.src} class="blob-2" alt="" />
+        <div class="cta-wrap-box">
+          <div class="about-cta-content">
+            <p class="section-label">Let's Work Together!</p>
+            <h2 class="fw-semi-bold-100 fs-secondary-header">
+              Achieve global trade success with PactZion - your trusted partner
+              for international growth.
+            </h2>
+            <Button class="btn-primary cta-btn" text="Contact Us" />
+          </div>
+          <img src={blob.src} class="blob-1" alt="" />
+          <img src={blob.src} class="blob-2" alt="" />
+        </div>
       </div>
     </section>
   </main>
