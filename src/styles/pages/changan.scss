@@ -1,0 +1,161 @@
+@import "../global";
+
+main {
+  font-family: 'helvetica';
+}
+
+header .header-wrapper {
+  background: transparent;
+}
+
+.changan-section {
+  min-height: 100vh;
+  background-image: url("../../assets/changan-bg-img.png");
+
+  .wrapper {
+    padding-block: 5.5rem 2rem;
+
+    .changan-big {
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.13) 58.36%, rgba(255, 255, 255, 0.00) 95.27%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: -6%;
+      font-size: clamp(2rem, 0.55412844036697253rem + 7.98165137614679vw, 7rem);
+    }
+
+    .changan-models {
+      position: relative;
+
+      .swiper-slide {
+        width: auto;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 206px;
+        height: 363px;
+        z-index: 2;
+        background: linear-gradient(270deg, rgba(5, 5, 5, 0.00) 0%, rgba(5, 5, 5, 0.32) 20.4%, rgba(5, 5, 5, 0.59) 42.4%, rgba(5, 5, 5, 0.82) 70.9%, #050505 100%);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 206px;
+        height: 400px;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(5, 5, 5, 0.00) 0%, rgba(5, 5, 5, 0.32) 20.4%, rgba(5, 5, 5, 0.59) 42.4%, rgba(5, 5, 5, 0.82) 70.9%, #050505 100%);
+      }
+
+      .model {
+        // max-width: 800px;
+
+        .hero-header {
+          text-align: center;
+
+          // GSAP initial values
+          opacity: 0;
+          transform: translateY(-1rem);
+          filter: blur(3px);
+
+          h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            font-family: $ff-header;
+            margin-bottom: $size-500;
+            letter-spacing: 4px;
+          }
+
+          button {
+            margin-inline: auto;
+            border-radius: 0;
+            padding: 1.1rem 1.4rem;
+            color: #000;
+            background: #FFF;
+            text-transform: uppercase;
+            letter-spacing: .75px;
+            font-size: 18px;
+            font-weight: 500;
+
+          }
+        }
+
+        .color-variants {
+          max-width: 800px;
+          .swiper-slide {
+            width: auto !important;
+            opacity: 1 !important;
+            transition: opacity .2s ease-in;
+          }
+
+          .swiper-slide:not(.swiper-slide-active) {
+            opacity: 0 !important;
+          }
+        }
+
+        .car-image {
+          height: 370px;
+
+          img {
+            margin: 2.5rem auto 0;
+            // width: 680px;
+          }
+
+        }
+
+        .car-specs {
+          // GSAP initial values
+          opacity: 0;
+          transform: translateY(1rem);
+          filter: blur(3px);
+
+          display: flex;
+          max-width: 1200px;
+          justify-content: space-between;
+          margin-inline: auto;
+          gap: $size-600;
+
+          .spec {
+            padding: 12px 16px;
+            min-width: 250px;
+            display: flex;
+            align-items: center;
+            gap: $size-300;
+            background: transparent;
+            border: 1.5px solid;
+            border-radius: 10px;
+            border-image: linear-gradient(45deg, rgba(206, 205, 206, 0.156), rgba(206, 205, 206, 0.764), rgba(206, 205, 206, 0.693), rgba(225, 224, 222, 0.277)) 1;
+
+            .spec-content {
+              color: #FFF;
+
+              .spec-title {
+                margin-bottom: $size-100;
+                font-size: 14px;
+                opacity: .5;
+              }
+
+              .spec-value {
+                font-size: 1.7rem;
+
+              }
+            }
+          }
+
+
+        }
+      }
+
+    }
+  }
+
+}

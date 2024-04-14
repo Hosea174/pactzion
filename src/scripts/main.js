@@ -4,7 +4,6 @@ import SplitType from "split-type";
 const navToggler = document.querySelector(".nav-toggler");
 const navMenu = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".navbar a");
-
 allEventListners();
 
 function allEventListners() {
@@ -33,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
 
 var copy = document.querySelector(".logos-slider-wrapper").cloneNode(true);
 document.querySelector(".partners-logo").appendChild(copy);

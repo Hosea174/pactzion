@@ -8,9 +8,16 @@
   font-display: swap;
 }
 
+// @font-face {
+//   font-family: 'Nikea';
+//   src: url('/fonts/NIKEA.woff') format('woff');
+//   font-style: normal;
+//   font-display: swap;
+// }
+
 @font-face {
-  font-family: 'Nikea';
-  src: url('/fonts/NIKEA.woff') format('woff');
+  font-family: 'Quaxcite';
+  src: url('/fonts/Quaxcite.woff') format('woff');
   font-style: normal;
   font-display: swap;
 }
@@ -29,7 +36,7 @@ $clr-neutral-300: #DCDCDC;
 $clr-neutral-100: #FFFFFF;
 
 // font families
-$ff-header: "Nikea", sans-serif;
+$ff-header: "Quaxcite", sans-serif;
 $ff-body: "Mona Sans", sans-serif;
 
 // font weights
@@ -97,7 +104,7 @@ $size-900: 5rem;
 .fs-primary-header {
   text-transform: capitalize;
   font-family: $ff-header;
-  font-size: clamp(2.7rem, 0.45412844036697253rem + 9.98165137614679vw, 9.5rem);
+  font-size: clamp(2rem, 0.55412844036697253rem + 7.98165137614679vw, 8rem);
   line-height: auto;
   color: $clr-neutral-100;
   letter-spacing: -1.6px;

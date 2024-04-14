@@ -24,8 +24,9 @@
     z-index: 1001;
     color: #F9FAFC;
     padding: .2rem .4rem;
-    font-size: 10vw;
-    font-family: $ff-header;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 800;
+    font-family: $ff-body;
   }
 
   .loader-overlay {
@@ -85,7 +86,7 @@
 
       .h1-wrapper {
         position: relative;
-        bottom: 46%;
+        bottom: 53%;
 
         h1 {
           background: linear-gradient(182deg, #F9FAFC 52.09%, #9F9F9F 98.31%);
@@ -150,6 +151,7 @@
           .hero-car {
             position: relative;
             transform: translateY(20%);
+            max-width: 95%;
             width: clamp(21.875rem, 15.063073394495412rem + 30.275229357798167vw, 42.5rem);
           }
         }
@@ -242,7 +244,7 @@
     @media screen and (max-width: 600px) {
       .car-text-box {
         h1 {
-          bottom: 32%;
+          bottom: 42%;
         }
       }
     }
@@ -257,7 +259,7 @@
     .wrapper {
       margin-block: 0;
       padding-bottom: 4rem;
-      padding-inline: 1rem;
+      // padding-inline: 1rem;
 
       .hero-label {
         position: relative;
@@ -308,7 +310,7 @@
 
     .car-text-box {
       .h1-wrapper {
-        bottom: 31.5%;
+        bottom: 36%;
 
         .overlay {
           -webkit-text-stroke: .3px #ebebeb;

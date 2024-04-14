@@ -85,7 +85,7 @@ import worldMap from "../assets/world-map.svg";
   <main>
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="container wrapper">
+      <div class="wrapper">
         <div class="section-label hero-label">
           <img src={featuredIcon.src} alt="" />
           <span>Featured Product</span>
@@ -139,36 +139,36 @@ import worldMap from "../assets/world-map.svg";
           </div>
         </div>
 
-        <div class="hero-socials">
-          <img class="line-arrow" src={line.src} alt="" />
-
-          <ul class="social-links" role="list">
-            <li>
-              <a href="#" class="yt-social"
-                ><img src={ytIcon.src} alt="YouTube" />
-              </a>
-            </li>
-            <li>
-              <a href="#" class="in-social"
-                ><img src={inIcon.src} alt="Linkedin" />
-              </a>
-            </li>
-            <li>
-              <a href="#" class="fb-social"
-                ><img src={fbIcon.src} alt="Facebook" />
-              </a>
-            </li>
-          </ul>
-
-          <img
-            class="line-arrow"
-            src={line.src}
-            alt=""
-            style="transform: scaleY(-1);"
-          />
-        </div>
-
-        <div class="bottom-box">
+        
+        <div class="bottom-box container">
+          <div class="hero-socials">
+            <img class="line-arrow" src={line.src} alt="" />
+  
+            <ul class="social-links" role="list">
+              <li>
+                <a href="#" class="yt-social"
+                  ><img src={ytIcon.src} alt="YouTube" />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="in-social"
+                  ><img src={inIcon.src} alt="Linkedin" />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="fb-social"
+                  ><img src={fbIcon.src} alt="Facebook" />
+                </a>
+              </li>
+            </ul>
+  
+            <img
+              class="line-arrow"
+              src={line.src}
+              alt=""
+              style="transform: scaleY(-1);"
+            />
+          </div>
           <div class="hero-cta">
             <h2 class="fs-secondary-header fw-semi-bold-100">
               Effortless Elegance on Every Road.

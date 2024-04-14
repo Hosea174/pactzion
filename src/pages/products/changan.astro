@@ -1,0 +1,188 @@
+---
+// component imports
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import "../../styles/pages/changan.scss";
+
+// Asset import
+import deepalS7 from "../../assets/changan/deepals7.png";
+import deepalSl3 from "../../assets/changan/deepalsl3.png";
+import estar from "../../assets/changan/estar.png";
+import Icon from "../../assets/icons/max-range.svg";
+---
+
+<Layout title="Changan - Explore state-of-the-art Electric Vehicles">
+  <Header />
+  <main>
+    <section class="changan-section">
+      <div class="wrapper">
+        <h1 class="changan-big fs-primary-header">CHANGAN</h1>
+        <div class="swiper changan-models">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide model">
+              <div class="hero-header">
+                <h2 class="model-name">Deepal S7</h2>
+                <a href="/"><button>Contact Sales</button></a>
+              </div>
+
+              <div class="swiper color-variants">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide variant car-image">
+                    <img src={deepalS7.src} alt="Deepal S7" />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img src={deepalSl3.src} alt="Deepal S7" />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img src={estar.src} alt="Deepal S7" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="car-specs">
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Output</p>
+                    <p class="spec-value fw-semi-bold-100">190 KW</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Range</p>
+                    <p class="spec-value fw-semi-bold-100">520 KM</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">NEDC milage</p>
+                    <p class="spec-value fw-semi-bold-100">485 KM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide model">
+              <div class="hero-header">
+                <h2 class="model-name">Deepal Sl3</h2>
+                <a href="/"><button>Contact Sales</button></a>
+              </div>
+
+              <div class="car-image">
+                <img src={deepalSl3.src} alt="Deepal S7" />
+              </div>
+
+              <div class="car-specs">
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Output</p>
+                    <p class="spec-value fw-semi-bold-100">190 KW</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Range</p>
+                    <p class="spec-value fw-semi-bold-100">520 KM</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">NEDC milage</p>
+                    <p class="spec-value fw-semi-bold-100">485 KM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide model">
+              <div class="hero-header">
+                <h2 class="model-name">Deepal Sl3</h2>
+                <a href="/"><button>Contact Sales</button></a>
+              </div>
+
+              <div class="car-image">
+                <img src={deepalSl3.src} alt="Deepal S7" />
+              </div>
+
+              <div class="car-specs">
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Output</p>
+                    <p class="spec-value fw-semi-bold-100">190 KW</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Range</p>
+                    <p class="spec-value fw-semi-bold-100">520 KM</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">NEDC milage</p>
+                    <p class="spec-value fw-semi-bold-100">485 KM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide model">
+              <div class="hero-header">
+                <h2 class="model-name">Estar</h2>
+                <a href="/"><button>Contact Sales</button></a>
+              </div>
+
+              <div class="car-image">
+                <img src={estar.src} alt="Estar" />
+              </div>
+
+              <div class="car-specs">
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Output</p>
+                    <p class="spec-value fw-semi-bold-100">190 KW</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Range</p>
+                    <p class="spec-value fw-semi-bold-100">520 KM</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={Icon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">NEDC milage</p>
+                    <p class="spec-value fw-semi-bold-100">485 KM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next" style="color: white">NEXT</div>
+          <div class="swiper-button-prev" style="color: white">PREV</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- <Footer/> -->
+</Layout>
+
+<!-- nested color picker slider with pagination -->
+<!-- nav buttons for carousel -->
+<!-- remove shadows on left and right for tablet view -->
+<!-- add another secondary button to show technical details -->
+<!-- make the car specs responsive -->
+<!-- change the spec icons -->
