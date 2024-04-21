@@ -88,7 +88,7 @@ function changanAnimate() {
     gsap.to([modelHeaderActive, specsContainerActive], {
       duration: 1,
       opacity: 1,
-      y: 0,
+      y: -0.5,
       ease: "power2.out",
       filter: "blur(0px)",
     });
@@ -110,4 +110,5 @@ const colorVariants = new Swiper(".color-variants", {
   },
   // nested: true,
   slidesPerView: "auto",
+  grabCursor: true,
 });

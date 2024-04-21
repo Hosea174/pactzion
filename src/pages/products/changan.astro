@@ -7,10 +7,25 @@ import Layout from "../../layouts/Layout.astro";
 import "../../styles/pages/changan.scss";
 
 // Asset import
-import deepalS7 from "../../assets/changan/deepals7.png";
-import deepalSl3 from "../../assets/changan/deepalsl3.png";
-import estar from "../../assets/changan/estar.png";
-import Icon from "../../assets/icons/max-range.svg";
+import deepalS7Blue from "../../assets/changan/deepals7-blue.png";
+import deepalS7Orange from "../../assets/changan/deepals7-orange.png";
+import deepalS7Green from "../../assets/changan/deepals7-green.png";
+
+import deepalSl3Cyan from "../../assets/changan/deepalsl3-cyan.png";
+import deepalSl3White from "../../assets/changan/deepalsl3-white.png";
+import deepalSl3Purple from "../../assets/changan/deepalsl3-purple.png";
+
+import estarWhite from "../../assets/changan/estar-white.png";
+import estarGreen from "../../assets/changan/estar-green.png";
+import estarBlue from "../../assets/changan/estar-blue.png";
+
+import eadoWhite from "../../assets/changan/eado-white.png";
+import eadoBlue from "../../assets/changan/eado-blue.png";
+import eadoGreen from "../../assets/changan/eado-green.png";
+import rangeIcon from "../../assets/icons/range-icon.svg";
+import outputIcon from "../../assets/icons/output-icon.svg";
+import nedcIcon from "../../assets/icons/nedc-icon.svg";
+
 ---
 
 <Layout title="Changan - Explore state-of-the-art Electric Vehicles">
@@ -30,13 +45,19 @@ import Icon from "../../assets/icons/max-range.svg";
               <div class="swiper color-variants">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide variant car-image">
-                    <img src={deepalS7.src} alt="Deepal S7" />
+                    <img src={deepalS7Blue.src} alt="Deepal S7 Blue Variant" />
                   </div>
                   <div class="swiper-slide variant car-image">
-                    <img src={deepalSl3.src} alt="Deepal S7" />
+                    <img
+                      src={deepalS7Orange.src}
+                      alt="Deepal S7 Orange Variant"
+                    />
                   </div>
                   <div class="swiper-slide variant car-image">
-                    <img src={estar.src} alt="Deepal S7" />
+                    <img
+                      src={deepalS7Green.src}
+                      alt="Deepal S7 Green Variant"
+                    />
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -44,21 +65,21 @@ import Icon from "../../assets/icons/max-range.svg";
 
               <div class="car-specs">
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={outputIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">Maximum Output</p>
                     <p class="spec-value fw-semi-bold-100">190 KW</p>
                   </div>
                 </div>
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={rangeIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">Maximum Range</p>
                     <p class="spec-value fw-semi-bold-100">520 KM</p>
                   </div>
                 </div>
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={nedcIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">NEDC milage</p>
                     <p class="spec-value fw-semi-bold-100">485 KM</p>
@@ -68,31 +89,51 @@ import Icon from "../../assets/icons/max-range.svg";
             </div>
             <div class="swiper-slide model">
               <div class="hero-header">
-                <h2 class="model-name">Deepal Sl3</h2>
+                <h2 class="model-name">Deepal SL3</h2>
                 <a href="/"><button>Contact Sales</button></a>
               </div>
 
-              <div class="car-image">
-                <img src={deepalSl3.src} alt="Deepal S7" />
+              <div class="swiper color-variants">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide variant car-image">
+                    <img
+                      src={deepalSl3Cyan.src}
+                      alt="Deepal SL3 Cyan Variant"
+                    />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img
+                      src={deepalSl3White.src}
+                      alt="Deepal SL3 White Variant"
+                    />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img
+                      src={deepalSl3Purple.src}
+                      alt="Deepal SL3 Purple Variant"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
               </div>
 
               <div class="car-specs">
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={outputIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">Maximum Output</p>
                     <p class="spec-value fw-semi-bold-100">190 KW</p>
                   </div>
                 </div>
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={rangeIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">Maximum Range</p>
                     <p class="spec-value fw-semi-bold-100">520 KM</p>
                   </div>
                 </div>
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={nedcIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">NEDC milage</p>
                     <p class="spec-value fw-semi-bold-100">485 KM</p>
@@ -100,68 +141,90 @@ import Icon from "../../assets/icons/max-range.svg";
                 </div>
               </div>
             </div>
-            <div class="swiper-slide model">
-              <div class="hero-header">
-                <h2 class="model-name">Deepal Sl3</h2>
-                <a href="/"><button>Contact Sales</button></a>
-              </div>
-
-              <div class="car-image">
-                <img src={deepalSl3.src} alt="Deepal S7" />
-              </div>
-
-              <div class="car-specs">
-                <div class="spec">
-                  <img src={Icon.src} alt="" />
-                  <div class="spec-content">
-                    <p class="spec-title">Maximum Output</p>
-                    <p class="spec-value fw-semi-bold-100">190 KW</p>
-                  </div>
-                </div>
-                <div class="spec">
-                  <img src={Icon.src} alt="" />
-                  <div class="spec-content">
-                    <p class="spec-title">Maximum Range</p>
-                    <p class="spec-value fw-semi-bold-100">520 KM</p>
-                  </div>
-                </div>
-                <div class="spec">
-                  <img src={Icon.src} alt="" />
-                  <div class="spec-content">
-                    <p class="spec-title">NEDC milage</p>
-                    <p class="spec-value fw-semi-bold-100">485 KM</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Estar</h2>
                 <a href="/"><button>Contact Sales</button></a>
               </div>
 
-              <div class="car-image">
-                <img src={estar.src} alt="Estar" />
+              <div class="swiper color-variants">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide variant car-image">
+                    <img src={estarWhite.src} alt="Estar White Variant" />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img src={estarGreen.src} alt="Estar Green Variant" />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img src={estarBlue.src} alt="Estar Blue Variant" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
               </div>
 
               <div class="car-specs">
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={outputIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">Maximum Output</p>
                     <p class="spec-value fw-semi-bold-100">190 KW</p>
                   </div>
                 </div>
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={rangeIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">Maximum Range</p>
                     <p class="spec-value fw-semi-bold-100">520 KM</p>
                   </div>
                 </div>
                 <div class="spec">
-                  <img src={Icon.src} alt="" />
+                  <img src={nedcIcon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">NEDC milage</p>
+                    <p class="spec-value fw-semi-bold-100">485 KM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide model">
+              <div class="hero-header">
+                <h2 class="model-name">Eado</h2>
+                <a href="/"><button>Contact Sales</button></a>
+              </div>
+
+              <div class="swiper color-variants">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide variant car-image">
+                    <img src={eadoWhite.src} alt="Eado White Variant" />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img src={eadoBlue.src} alt="Eado Blue Variant" />
+                  </div>
+                  <div class="swiper-slide variant car-image">
+                    <img src={eadoGreen.src} alt="Eado Green Variant" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="car-specs">
+                <div class="spec">
+                  <img src={outputIcon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Output</p>
+                    <p class="spec-value fw-semi-bold-100">190 KW</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={rangeIcon.src} alt="" />
+                  <div class="spec-content">
+                    <p class="spec-title">Maximum Range</p>
+                    <p class="spec-value fw-semi-bold-100">520 KM</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <img src={nedcIcon.src} alt="" />
                   <div class="spec-content">
                     <p class="spec-title">NEDC milage</p>
                     <p class="spec-value fw-semi-bold-100">485 KM</p>
@@ -170,19 +233,166 @@ import Icon from "../../assets/icons/max-range.svg";
               </div>
             </div>
           </div>
-          <div class="swiper-button-next" style="color: white">NEXT</div>
-          <div class="swiper-button-prev" style="color: white">PREV</div>
+          <div class="swiper-button-next nav-btn">
+            <svg
+              width="39"
+              height="42"
+              viewBox="0 0 39 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_925_30)">
+                <g filter="url(#filter0_d_925_30)">
+                  <path
+                    d="M39 0H0V42H39V0Z"
+                    fill="white"
+                    class="nav-fill"
+                    fill-opacity="0.06"></path>
+                  <path
+                    d="M38.5 0.5H0.5V41.5H38.5V0.5Z"
+                    stroke="url(#paint0_linear_925_30)"></path>
+                  <path
+                    d="M25 10L14 21L25 32"
+                    stroke="white"
+                    stroke-opacity="0.85"
+                    stroke-width="2"></path>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_925_30"
+                  x="-70"
+                  y="-68"
+                  width="179"
+                  height="182"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"
+                  ></feFlood>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"></feColorMatrix>
+                  <feOffset dy="2"></feOffset>
+                  <feGaussianBlur stdDeviation="35"></feGaussianBlur>
+                  <feComposite in2="hardAlpha" operator="out"></feComposite>
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_925_30"></feBlend>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_925_30"
+                    result="shape"></feBlend>
+                </filter>
+                <linearGradient
+                  id="paint0_linear_925_30"
+                  x1="38"
+                  y1="-4.75934e-07"
+                  x2="-3.885"
+                  y2="38.893"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="white"></stop>
+                  <stop offset="0.742" stop-color="#999999" stop-opacity="0.72"
+                  ></stop>
+                </linearGradient>
+                <clipPath id="clip0_925_30">
+                  <rect width="39" height="42" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="swiper-button-prev nav-btn">
+            <svg
+              width="39"
+              height="42"
+              viewBox="0 0 39 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_925_30)">
+                <g filter="url(#filter0_d_925_30)">
+                  <path
+                    d="M39 0H0V42H39V0Z"
+                    fill="white"
+                    class="nav-fill"
+                    fill-opacity="0.06"></path>
+                  <path
+                    d="M38.5 0.5H0.5V41.5H38.5V0.5Z"
+                    stroke="url(#paint0_linear_925_30)"></path>
+                  <path
+                    d="M25 10L14 21L25 32"
+                    stroke="white"
+                    stroke-opacity="0.85"
+                    stroke-width="2"></path>
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_925_30"
+                  x="-70"
+                  y="-68"
+                  width="179"
+                  height="182"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"
+                  ></feFlood>
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"></feColorMatrix>
+                  <feOffset dy="2"></feOffset>
+                  <feGaussianBlur stdDeviation="35"></feGaussianBlur>
+                  <feComposite in2="hardAlpha" operator="out"></feComposite>
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"
+                  ></feColorMatrix>
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_925_30"></feBlend>
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_925_30"
+                    result="shape"></feBlend>
+                </filter>
+                <linearGradient
+                  id="paint0_linear_925_30"
+                  x1="38"
+                  y1="-4.75934e-07"
+                  x2="-3.885"
+                  y2="38.893"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="white"></stop>
+                  <stop offset="0.742" stop-color="#999999" stop-opacity="0.72"
+                  ></stop>
+                </linearGradient>
+                <clipPath id="clip0_925_30">
+                  <rect width="39" height="42" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
+
     </section>
+
+    <!-- add another secondary button to show technical details -->
   </main>
-
-  <!-- <Footer/> -->
-</Layout>
-
-<!-- nested color picker slider with pagination -->
-<!-- nav buttons for carousel -->
-<!-- remove shadows on left and right for tablet view -->
-<!-- add another secondary button to show technical details -->
-<!-- make the car specs responsive -->
-<!-- change the spec icons -->
+  </Layout>

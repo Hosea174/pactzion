@@ -153,8 +153,7 @@ header {
         z-index: -1;
         flex-direction: column;
         align-items: center;
-        // border-radius: 7rem;
-        background: rgb(46 39 28);
+        background: $clr-neutral-850;
         backdrop-filter: blur(21px);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
         max-height: 0;
@@ -171,7 +170,7 @@ header {
       }
 
       .nav-links.open {
-        opacity: .95;
+        opacity: 1;
         padding-top: 150px;
         min-height: 100vh;
         overflow: visible;
@@ -183,5 +182,12 @@ header {
         transition-delay: calc(0.15s * var(--i));
       }
     }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    top: 0;
+    width: 100%;
   }
 }
