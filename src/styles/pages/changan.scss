@@ -88,7 +88,9 @@ header .header-wrapper {
         top: 45%;
         z-index: 10;
         cursor: pointer;
-
+        width: 39px;
+        height: 42px;
+        
         &.swiper-button-prev {
           left: 30px;
         }
@@ -113,11 +115,27 @@ header .header-wrapper {
 
       @media (max-width: 858px) {
         .nav-btn {
-          display: none;
+          top: 50%;
         }
       }
+
+      @media (max-width: 550px) {
+        .nav-btn {
+          top: 37%;
+
+          &.swiper-button-prev {
+            left: 15px;
+          }
+
+          &.swiper-button-next {
+            right: 15px;
+          }
+        }
+      }
+
       .model {
         width: clamp(320px, 90vw, 818px);
+
         .hero-header {
           text-align: center;
 
@@ -165,6 +183,7 @@ header .header-wrapper {
           .swiper-pagination {
             position: unset;
             margin-block-start: 2rem;
+
             .swiper-pagination-bullet {
               width: 28px;
               height: 28px;
@@ -257,6 +276,16 @@ header .header-wrapper {
             }
           }
         }
+
+        @media (max-width: 450px) {
+          .car-specs .spec {
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            width: clamp(160px, 40vw, 300px);
+            text-align: center;
+          }
+        }
       }
 
     }
@@ -272,10 +301,11 @@ header .header-wrapper {
     }
 
   }
+
   @media (max-width: 830px) {
     .wrapper {
       padding-block-start: 7rem;
     }
-    
+
   }
 }

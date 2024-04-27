@@ -88,7 +88,7 @@ function changanAnimate() {
     gsap.to([modelHeaderActive, specsContainerActive], {
       duration: 1,
       opacity: 1,
-      y: -0.5,
+      y: -0,
       ease: "power2.out",
       filter: "blur(0px)",
     });

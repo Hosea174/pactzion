@@ -1,0 +1,157 @@
+---
+// component imports
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import ItemCheckbox from "../components/ItemCheckbox.astro";
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/pages/contact.scss";
+
+// Asset imports
+import itemChangan from "../assets/icons/car-icon.svg";
+import itemExports from "../assets/icons/exports-icon.svg";
+import itemEstate from "../assets/icons/real-estate-icon.svg";
+---
+
+<Layout title="PactZion - Contact us">
+  <Header />
+  <section class="hero-section">
+    <div class="wrapper container">
+      <div class="hero-content">
+        <p class="section-label">Contact Us</p>
+        <h1 class="fw-semi-bold-200">
+          We are your trusted trade partner, based in Ethiopia
+        </h1>
+      </div>
+      <div class="hero-contact-info">
+        <div class="hero-contact">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="17"
+            viewBox="0 0 20 17"
+            fill="none"
+          >
+            <path
+              d="M20 2.16699C20 1.06699 19.1 0.166992 18 0.166992H2C0.9 0.166992 0 1.06699 0 2.16699V14.167C0 15.267 0.9 16.167 2 16.167H18C19.1 16.167 20 15.267 20 14.167V2.16699ZM18 2.16699L10 7.16699L2 2.16699H18ZM18 14.167H2V4.16699L10 9.16699L18 4.16699V14.167Z"
+              fill="black"></path>
+          </svg>
+          <p>info@pactzion.com</p>
+        </div>
+        <div class="hero-contact">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="21"
+            viewBox="0 0 18 21"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9 0.166992C11.3869 0.166992 13.6761 1.1152 15.364 2.80303C17.0518 4.49086 18 6.78004 18 9.16699C18 12.241 16.324 14.757 14.558 16.562C13.6755 17.4539 12.7128 18.2626 11.682 18.978L11.256 19.268L11.056 19.401L10.679 19.641L10.343 19.846L9.927 20.088C9.64451 20.2488 9.32505 20.3333 9 20.3333C8.67495 20.3333 8.35549 20.2488 8.073 20.088L7.657 19.846L7.137 19.526L6.945 19.401L6.535 19.128C5.42298 18.3753 4.38707 17.5159 3.442 16.562C1.676 14.756 0 12.241 0 9.16699C0 6.78004 0.948211 4.49086 2.63604 2.80303C4.32387 1.1152 6.61305 0.166992 9 0.166992ZM9 2.16699C7.14348 2.16699 5.36301 2.90449 4.05025 4.21724C2.7375 5.53 2 7.31048 2 9.16699C2 11.489 3.272 13.527 4.871 15.163C5.55862 15.8589 6.30174 16.4977 7.093 17.073L7.551 17.399C7.699 17.502 7.841 17.598 7.978 17.687L8.368 17.937L8.711 18.146L9 18.315L9.455 18.046L9.822 17.816C10.017 17.692 10.227 17.553 10.449 17.399L10.907 17.073C11.6983 16.4977 12.4414 15.8589 13.129 15.163C14.728 13.528 16 11.489 16 9.16699C16 7.31048 15.2625 5.53 13.9497 4.21724C12.637 2.90449 10.8565 2.16699 9 2.16699ZM9 5.16699C10.0609 5.16699 11.0783 5.58842 11.8284 6.33856C12.5786 7.08871 13 8.10613 13 9.16699C13 10.2279 12.5786 11.2453 11.8284 11.9954C11.0783 12.7456 10.0609 13.167 9 13.167C7.93913 13.167 6.92172 12.7456 6.17157 11.9954C5.42143 11.2453 5 10.2279 5 9.16699C5 8.10613 5.42143 7.08871 6.17157 6.33856C6.92172 5.58842 7.93913 5.16699 9 5.16699ZM9 7.16699C8.46957 7.16699 7.96086 7.37771 7.58579 7.75278C7.21071 8.12785 7 8.63656 7 9.16699C7 9.69742 7.21071 10.2061 7.58579 10.5812C7.96086 10.9563 8.46957 11.167 9 11.167C9.53043 11.167 10.0391 10.9563 10.4142 10.5812C10.7893 10.2061 11 9.69742 11 9.16699C11 8.63656 10.7893 8.12785 10.4142 7.75278C10.0391 7.37771 9.53043 7.16699 9 7.16699Z"
+              fill="black"></path>
+          </svg>
+          <p>Bloom Tower, ECA Road, Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="hero-contact">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="19"
+            viewBox="0 0 20 19"
+            fill="none"
+          >
+            <path
+              d="M13.3792 12.974L13.8352 12.521L12.7762 11.457L12.3222 11.91L13.3792 12.974ZM15.3642 12.331L17.2752 13.37L17.9902 12.052L16.0802 11.014L15.3642 12.331ZM17.6422 15.434L16.2222 16.847L17.2792 17.91L18.6992 16.498L17.6422 15.434ZM15.3562 17.301C13.9062 17.437 10.1562 17.316 6.09417 13.278L5.03617 14.341C9.46817 18.748 13.6872 18.964 15.4962 18.795L15.3562 17.301ZM6.09417 13.278C2.22317 9.42797 1.58117 6.19097 1.50117 4.78597L0.00317342 4.87097C0.103173 6.63897 0.898174 10.227 5.03617 14.341L6.09417 13.278ZM7.46917 7.09797L7.75617 6.81197L6.70017 5.74897L6.41317 6.03397L7.46917 7.09797ZM7.98417 3.17697L6.72417 1.49297L5.52317 2.39297L6.78317 4.07597L7.98417 3.17697ZM2.48317 1.12597L0.913173 2.68597L1.97117 3.74997L3.54017 2.18997L2.48317 1.12597ZM6.94117 6.56597C6.41117 6.03397 6.41117 6.03397 6.41117 6.03597H6.40917L6.40617 6.03997C6.35896 6.08816 6.31643 6.14073 6.27917 6.19697C6.22517 6.27697 6.16617 6.38197 6.11617 6.51497C5.9944 6.85828 5.96408 7.22738 6.02817 7.58597C6.16217 8.45097 6.75817 9.59397 8.28417 11.112L9.34217 10.048C7.91317 8.62797 7.57317 7.76397 7.51017 7.35597C7.48017 7.16197 7.51117 7.06597 7.52017 7.04397C7.52517 7.02997 7.52717 7.02897 7.52017 7.03797C7.51135 7.05184 7.50131 7.06489 7.49017 7.07697L7.48017 7.08697C7.47694 7.09008 7.47361 7.09308 7.47017 7.09597L6.94117 6.56597ZM8.28417 11.112C9.81117 12.63 10.9602 13.222 11.8262 13.354C12.2692 13.422 12.6262 13.368 12.8972 13.267C13.0487 13.2109 13.1905 13.1312 13.3172 13.031C13.3344 13.0166 13.3511 13.0016 13.3672 12.986L13.3742 12.98L13.3772 12.977L13.3782 12.975C13.3782 12.975 13.3792 12.974 12.8502 12.442C12.3202 11.91 12.3232 11.909 12.3232 11.909L12.3252 11.907L12.3272 11.905L12.3332 11.9L12.3432 11.89C12.3552 11.8792 12.3679 11.8692 12.3812 11.86C12.3912 11.853 12.3882 11.856 12.3742 11.862C12.3492 11.871 12.2512 11.902 12.0542 11.872C11.6402 11.808 10.7702 11.468 9.34217 10.048L8.28417 11.112ZM6.72417 1.49197C5.70417 0.131968 3.70017 -0.0840323 2.48317 1.12597L3.54017 2.18997C4.07217 1.66097 5.01617 1.71597 5.52317 2.39297L6.72417 1.49197ZM1.50217 4.78697C1.48217 4.44097 1.64117 4.07897 1.97117 3.75097L0.912174 2.68697C0.375174 3.22097 -0.0478266 3.97697 0.00317342 4.87097L1.50217 4.78697ZM16.2222 16.847C15.9482 17.121 15.6522 17.275 15.3572 17.302L15.4962 18.795C16.2312 18.726 16.8322 18.356 17.2802 17.911L16.2222 16.847ZM7.75617 6.81197C8.74117 5.83297 8.81417 4.28597 7.98517 3.17797L6.78417 4.07697C7.18717 4.61597 7.12717 5.32297 6.69917 5.74997L7.75617 6.81197ZM17.2762 13.371C18.0932 13.815 18.2202 14.861 17.6432 15.435L18.7012 16.498C20.0412 15.165 19.6282 12.942 17.9912 12.053L17.2762 13.371ZM13.8352 12.522C14.2192 12.14 14.8372 12.046 15.3652 12.332L16.0812 11.015C14.9972 10.425 13.6532 10.588 12.7772 11.458L13.8352 12.522Z"
+              fill="black"></path>
+          </svg>
+          <p>+251912345678</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-page-form-section">
+    <div class="wrapper container">
+      <form action="/">
+        <div class="items-checkbox">
+          <div class="item-changan item-group">
+            <div class="item-name">
+              <img src={itemChangan.src} alt="" />
+              <p class="fw-semi-bold-200">Changan Electric Vehicles</p>
+            </div>
+            <div class="checkboxes">
+              <ItemCheckbox text="Deepal S7" />
+              <ItemCheckbox text="Deepal Sl3" />
+              <ItemCheckbox text="Eado" />
+              <ItemCheckbox text="Estar" />
+              <ItemCheckbox text="Qiyuan Q05" />
+              <ItemCheckbox text="Qiyuan A05" />
+            </div>
+          </div>
+          <div class="item-exports item-group">
+            <div class="item-name">
+              <img src={itemExports.src} alt="" />
+              <p class="fw-semi-bold-200">Export Items</p>
+            </div>
+            <div class="checkboxes">
+              <ItemCheckbox text="Pulses" />
+              <ItemCheckbox text="Spices" />
+              <ItemCheckbox text="Oil Seeds" />
+              <ItemCheckbox text="Coffee" />
+              <ItemCheckbox text="Livestock" />
+            </div>
+          </div>
+          <div class="item-real-estate item-group">
+            <div class="item-name">
+              <img src={itemEstate.src} alt="" />
+              <p class="fw-semi-bold-200">Real Estate Listings</p>
+            </div>
+            <div class="checkboxes">
+              <ItemCheckbox text="Bole Site" />
+              <ItemCheckbox text="4 kilo Site" />
+              <ItemCheckbox text="Summit Site" />
+              <ItemCheckbox text="22 Site" />
+            </div>
+          </div>
+        </div>
+
+        <div class="text-inputs">
+          <div class="contact-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" required />
+          </div>
+
+          <div class="contact-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" required />
+          </div>
+          <div class="contact-field">
+            <label for="company">Company Name (Optional)</label>
+            <input id="company" type="text" />
+          </div>
+
+          <div class="contact-field">
+            <label for="message">Message (Optional)</label>
+            <textarea name="message" id="message" cols="30" rows="7"></textarea>
+          </div>
+
+          <Button class="btn-primary submit" text="Send Message" />
+        </div>
+      </form>
+    </div>
+  </section>
+  <iframe
+    title="GoogleMap"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.28255800777376!2d38.768661538293124!3d9.01615212859214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8598186f04e1%3A0x488636c1b82c1cb8!2sBloom%20Tower!5e0!3m2!1sen!2set!4v1707736517536!5m2!1sen!2set"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    class="map"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <Footer />
+</Layout>

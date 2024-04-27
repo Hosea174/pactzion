@@ -1,0 +1,14 @@
+---
+import "../styles/components/checkbox.scss";
+
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<label class="custom-checkbox">
+  <input type="checkbox" />
+  <span>{text}</span>
+</label>
