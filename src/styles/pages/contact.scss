@@ -15,6 +15,7 @@ header .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    gap: $size-500;
 
     .hero-content {
       .section-label {
@@ -30,6 +31,7 @@ header .header-wrapper {
     }
 
     .hero-contact-info {
+      flex-shrink: 0;
 
       .hero-contact {
         margin-bottom: $size-400;
@@ -40,10 +42,20 @@ header .header-wrapper {
       }
     }
   }
+
+  @media (max-width: 900px) {
+    .wrapper {
+      padding: 9rem 2rem 3.5rem;
+      flex-direction: column;
+      gap: $size-600;
+      align-items: start;
+    }
+
+  }
 }
 
 .contact-page-form-section {
-  margin-block: $size-900;
+  margin-block: $size-800;
 
   .wrapper {
     form {
@@ -95,7 +107,8 @@ header .header-wrapper {
             border-radius: 5px;
             border-bottom: 1px solid $clr-primary-400;
             padding-inline: 12px;
-            background: #fdeed9;;
+            background: #fdeed9;
+            ;
             outline: none;
             resize: vertical;
             max-height: 280px;
@@ -119,6 +132,17 @@ header .header-wrapper {
           margin-block: $size-600;
         }
 
+      }
+    }
+
+    @media (max-width: 900px) {
+      form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $size-500;
+        max-width: 700px;
+        margin-inline: auto;
       }
 
     }

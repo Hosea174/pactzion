@@ -57,7 +57,6 @@ function startLoader() {
     let delay = Math.floor(Math.random() * 200 + 50);
     setTimeout(updateCounter, delay);
   }
-
   updateCounter();
 
   let loader = document.querySelector(".loader-overlay");
