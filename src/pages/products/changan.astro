@@ -25,7 +25,6 @@ import eadoGreen from "../../assets/changan/eado-green.png";
 import rangeIcon from "../../assets/icons/range-icon.svg";
 import outputIcon from "../../assets/icons/output-icon.svg";
 import nedcIcon from "../../assets/icons/nedc-icon.svg";
-
 ---
 
 <Layout title="Changan - Explore state-of-the-art Electric Vehicles">
@@ -39,7 +38,9 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Deepal S7</h2>
-                <a href="/"><button>Contact Sales</button></a>
+                <button class="submit-btn" data-value="deepal-s7">
+                  Contact Sales
+                </button>
               </div>
 
               <div class="swiper color-variants">
@@ -90,7 +91,10 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Deepal SL3</h2>
-                <a href="/"><button>Contact Sales</button></a>
+
+                <button class="submit-btn" data-value="deepal-sl3">
+                  Contact Sales
+                </button>
               </div>
 
               <div class="swiper color-variants">
@@ -144,7 +148,9 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Estar</h2>
-                <a href="/"><button>Contact Sales</button></a>
+                <button class="submit-btn" data-value="estar">
+                  Contact Sales
+                </button>
               </div>
 
               <div class="swiper color-variants">
@@ -190,7 +196,9 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Eado</h2>
-                <a href="/"><button>Contact Sales</button></a>
+                <button class="submit-btn" data-value="eado">
+                  Contact Sales
+                </button>
               </div>
 
               <div class="swiper color-variants">
@@ -390,12 +398,23 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
           </div>
         </div>
       </div>
-
     </section>
-    <!-- create a table  -->
-
-    
-
-    <!-- add another secondary button to show technical details -->
   </main>
-  </Layout>
+</Layout>
+
+<script>
+  const btns = document.querySelectorAll(".submit-btn");
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const value = btn.getAttribute("data-value");
+      window.location.href = "/contact?item=" + value;
+    });
+  });
+</script>
+<!-- TODO:
+
+- make the contact page responsive
+- change the pagination button colors for each car
+- 
+
+-->

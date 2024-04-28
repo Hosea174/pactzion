@@ -2,18 +2,19 @@
 // Component imports
 import "../styles/components/button.scss";
 
-const { text, class: className } = Astro.props;
-
+const { text, class: className, value } = Astro.props;
 interface Props {
   text: string;
   class: string;
+  value?: string;
 }
 ---
 
-<!-- <button class={className}> -->
-<button class:list={["fw-semi-bold-200 fs-small", className]}>
+<button
+  class:list={["fw-semi-bold-200 fs-small", className]}
+  data-value={value ? value : ""}
+>
   {text}
-
   <div class="btn-icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="none">
       <path

@@ -3,12 +3,13 @@ import "../styles/components/checkbox.scss";
 
 interface Props {
   text: string;
+  value: string;
 }
 
-const { text } = Astro.props;
+const { text, value } = Astro.props;
 ---
 
 <label class="custom-checkbox">
-  <input type="checkbox" />
+  <input type="checkbox" value={value}/>
   <span>{text}</span>
 </label>

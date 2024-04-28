@@ -88,9 +88,12 @@ const htmlString = he.decode(htmlContent);
           <div class="product-brief">
             <!-- content injected by js from md file -->
           </div>
-          <a href="/waiting"
-            ><Button class="btn-primary product-cta" text="Enquire Now" /></a
-          >
+
+          <Button
+            class="btn-primary product-cta submit-btn"
+            text="Enquire Now"
+            value={category}
+          />
         </div>
       </div>
 
@@ -144,3 +147,11 @@ const htmlString = he.decode(htmlContent);
     categoryTag.style.backgroundColor = categoryColors[category];
   </script>
 </Layout>
+
+<script>
+  const btn = document.querySelector(".submit-btn");
+  btn.addEventListener("click", () => {
+    const value = btn.getAttribute("data-value");
+    window.location.href = "/contact?item=" + value;
+  });
+</script>
