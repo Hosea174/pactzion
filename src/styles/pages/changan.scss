@@ -90,7 +90,7 @@ header .header-wrapper {
         cursor: pointer;
         width: 39px;
         height: 42px;
-        
+
         &.swiper-button-prev {
           left: 30px;
         }
@@ -188,25 +188,81 @@ header .header-wrapper {
               width: 28px;
               height: 28px;
               opacity: .85;
-              border: #E8E8E8 solid 1px;
+              border: #e8e8e874 solid 1px;
               margin-right: 10px;
 
               &.swiper-pagination-bullet-active {
                 opacity: 1;
-                border: #E8E8E8 solid 3px;
+                border: rgba(255, 255, 255, 1) solid 3.5px;
               }
+            }
+          }
 
-              &:nth-child(1) {
-                background-color: blue;
-              }
+          &#deepal-s7 .swiper-pagination-bullet {
+            &:nth-child(1) {
+              background: rgb(35, 128, 162);
+              background: linear-gradient(180deg, rgba(35, 128, 162, 1) 14%, rgba(24, 63, 78, 0.8828781512605042) 100%);
+            }
 
-              &:nth-child(2) {
-                background-color: orange;
-              }
+            &:nth-child(2) {
+              background: rgb(230, 119, 39);
+              background: linear-gradient(180deg, rgba(230, 119, 39, 1) 14%, rgba(106, 30, 7, 1) 100%);
+            }
 
-              &:nth-child(3) {
-                background-color: green;
-              }
+            &:nth-child(3) {
+              background: rgb(39, 230, 119);
+              background: linear-gradient(180deg, rgba(39, 230, 119, 1) 14%, rgba(7, 106, 48, 1) 100%);
+            }
+          }
+
+          &#deepal-sl3 .swiper-pagination-bullet {
+            &:nth-child(1) {
+              background: rgb(184, 219, 210);
+              background: linear-gradient(180deg, rgba(184, 219, 210, 1) 14%, rgba(84, 109, 103, 0.8800770308123249) 100%);
+            }
+
+            &:nth-child(2) {
+              background: rgb(237, 237, 237);
+              background: linear-gradient(180deg, rgba(237, 237, 237, 1) 14%, rgba(153, 153, 153, 0.8800770308123249) 100%);
+            }
+
+            &:nth-child(3) {
+              background: rgb(199, 184, 221);
+              background: linear-gradient(180deg, rgba(199, 184, 221, 1) 14%, rgba(113, 102, 130, 1) 100%);
+            }
+          }
+
+          &#estar .swiper-pagination-bullet {
+            &:nth-child(1) {
+              background: rgb(237, 237, 237);
+              background: linear-gradient(180deg, rgba(237, 237, 237, 1) 14%, rgba(153, 153, 153, 0.8800770308123249) 100%);
+            }
+
+            &:nth-child(2) {
+              background: rgb(203, 226, 184);
+              background: linear-gradient(180deg, rgba(203, 226, 184, 1) 14%, rgba(130, 142, 120, 1) 100%);
+            }
+
+            &:nth-child(3) {
+              background: rgb(170, 196, 218);
+              background: linear-gradient(180deg, rgba(170, 196, 218, 1) 14%, rgba(125, 140, 152, 1) 100%);
+            }
+          }
+
+          &#eado .swiper-pagination-bullet {
+            &:nth-child(1) {
+              background: rgb(237, 237, 237);
+              background: linear-gradient(180deg, rgba(237, 237, 237, 1) 14%, rgba(153, 153, 153, 0.8800770308123249) 100%);
+            }
+
+            &:nth-child(2) {
+              background: rgb(170, 196, 218);
+              background: linear-gradient(180deg, rgba(170, 196, 218, 1) 14%, rgba(125, 140, 152, 1) 100%);
+            }
+
+            &:nth-child(3) {
+              background: rgb(203, 226, 184);
+              background: linear-gradient(180deg, rgba(203, 226, 184, 1) 14%, rgba(130, 142, 120, 1) 100%);
             }
           }
         }
