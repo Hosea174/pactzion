@@ -38,9 +38,15 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Deepal S7</h2>
-                <button class="submit-btn" data-value="deepal-s7">
-                  Contact Sales
-                </button>
+                <div class="slide-btns">
+                  <button class="submit-btn" data-value="deepal-s7">
+                    Contact Sales
+                  </button>
+                  <button
+                    class="technical-specs"
+                    data-modal-id="deepal-s7-modal">Specs</button
+                  >
+                </div>
               </div>
 
               <div class="swiper color-variants" id="deepal-s7">
@@ -88,13 +94,20 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Deepal SL3</h2>
 
-                <button class="submit-btn" data-value="deepal-sl3">
-                  Contact Sales
-                </button>
+                <div class="slide-btns">
+                  <button class="submit-btn" data-value="deepal-sl3">
+                    Contact Sales
+                  </button>
+                  <button
+                    class="technical-specs"
+                    data-modal-id="deepal-sl3-modal">Specs</button
+                  >
+                </div>
               </div>
 
               <div class="swiper color-variants" id="deepal-sl3">
@@ -148,9 +161,15 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Estar</h2>
-                <button class="submit-btn" data-value="estar">
-                  Contact Sales
-                </button>
+                <div class="slide-btns">
+                  <button class="submit-btn" data-value="estar">
+                    Contact Sales
+                  </button>
+
+                  <button class="technical-specs" data-modal-id="estar-modal"
+                    >Specs</button
+                  >
+                </div>
               </div>
 
               <div class="swiper color-variants" id="estar">
@@ -196,9 +215,15 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
             <div class="swiper-slide model">
               <div class="hero-header">
                 <h2 class="model-name">Eado</h2>
-                <button class="submit-btn" data-value="eado">
-                  Contact Sales
-                </button>
+                <div class="slide-btns">
+                  <button class="submit-btn" data-value="eado">
+                    Contact Sales
+                  </button>
+
+                  <button class="technical-specs" data-modal-id="eado-modal"
+                    >Specs</button
+                  >
+                </div>
               </div>
 
               <div class="swiper color-variants" id="eado">
@@ -241,6 +266,7 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
               </div>
             </div>
           </div>
+
           <div class="swiper-button-next nav-btn">
             <svg
               width="39"
@@ -399,20 +425,286 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
         </div>
       </div>
     </section>
+
+    <div class="modals-wrapper">
+      <div id="overlay" class="overlay"></div>
+
+      <div id="deepal-s7-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 class="fs-tertiary-header fw-semi-bold-200">Technical Details</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Model Name</td>
+              <td>Changan Deepal S7 SUV</td>
+            </tr>
+            <tr>
+              <td>Cltc Electric Range (Km)</td>
+              <td>520/620</td>
+            </tr>
+            <tr>
+              <td>Slow Charge Time</td>
+              <td>6.5 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Speed (Km/hr)</td>
+              <td>180</td>
+            </tr>
+            <tr>
+              <td>Official 0-50 KM/hr Acceleration (S)</td>
+              <td>6.7/7.5</td>
+            </tr>
+            <tr>
+              <td>Motor (PS)</td>
+              <td>258/218</td>
+            </tr>
+            <tr>
+              <td>Maximum Power (KW)</td>
+              <td>190</td>
+            </tr>
+            <tr>
+              <td>Fast Charge Time</td>
+              <td>0.58 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Torque(N·m)</td>
+              <td>320</td>
+            </tr>
+            <tr>
+              <td>Length x width x height (mm)</td>
+              <td>4750 x 1930 x 1625</td>
+            </tr>
+            <tr>
+              <td>Origin</td>
+              <td>China</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="deepal-sl3-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 class="fs-tertiary-header fw-semi-bold-200">Technical Details</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Model Name</td>
+              <td>Changan Deepal SL3 2023</td>
+            </tr>
+            <tr>
+              <td>Cltc Electric Range (Km)</td>
+              <td>515/705</td>
+            </tr>
+            <tr>
+              <td>Slow Charge Time</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Maximum Speed (Km/Hr)</td>
+              <td>170</td>
+            </tr>
+            <tr>
+              <td>Official 0-100 Km/Hr Acceleration (S)</td>
+              <td>5.9</td>
+            </tr>
+            <tr>
+              <td>Motor (PS)</td>
+              <td>190</td>
+            </tr>
+            <tr>
+              <td>Maximum Power (KW)</td>
+              <td>190</td>
+            </tr>
+            <tr>
+              <td>Fast Charge Time</td>
+              <td>0.42 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Torque(N·m)</td>
+              <td>320</td>
+            </tr>
+            <tr>
+              <td>Length x Width x Height (mm)</td>
+              <td>4820 x 1890 x 1480 mm</td>
+            </tr>
+            <tr>
+              <td>Origin</td>
+              <td>China</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="estar-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 class="fs-tertiary-header fw-semi-bold-200">Technical Details</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Model Name</td>
+              <td>Changan Benben E-star 2023</td>
+            </tr>
+            <tr>
+              <td>Cltc Electric Range (Km)</td>
+              <td>310</td>
+            </tr>
+            <tr>
+              <td>Slow Charge Time</td>
+              <td>12.0 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Speed (Km/Hr)</td>
+              <td>101 Km/Hr</td>
+            </tr>
+            <tr>
+              <td>Official 0-50 Km/Hr Acceleration (S)</td>
+              <td>4.7</td>
+            </tr>
+            <tr>
+              <td>Motor (PS)</td>
+              <td>76</td>
+            </tr>
+            <tr>
+              <td>Maximum Power (KW)</td>
+              <td>56</td>
+            </tr>
+            <tr>
+              <td>Fast Charge Time</td>
+              <td>0.55 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Torque(N·m)</td>
+              <td>170 Nm</td>
+            </tr>
+            <tr>
+              <td>Length x Width x Height (mm)</td>
+              <td>3730 x 1650 x 1560 mm</td>
+            </tr>
+            <tr>
+              <td>Origin</td>
+              <td>China</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="eado-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 class="fs-tertiary-header fw-semi-bold-200">Technical Details</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>Model No.</td>
+              <td>Changan Benben E-star 2023</td>
+            </tr>
+            <tr>
+              <td>Cltc Electric Range (KM)</td>
+              <td>405</td>
+            </tr>
+            <tr>
+              <td>Slow Charge Time</td>
+              <td>8.0 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Speed (Km/Hr)</td>
+              <td>140 Km/Hr</td>
+            </tr>
+            <tr>
+              <td>Official 0-50 Km/Hr Acceleration (S)</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Motor (PS)</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Maximum Power (KW)</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Fast Charge Time</td>
+              <td>0.5 Hours</td>
+            </tr>
+            <tr>
+              <td>Maximum Torque(N·m)</td>
+              <td>245 Nm</td>
+            </tr>
+            <tr>
+              <td>Length x width x height (mm)</td>
+              <td>4620 x 1820 x 1515 mm</td>
+            </tr>
+            <tr>
+              <td>Origin</td>
+              <td>China</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
 
 <script>
-  const btns = document.querySelectorAll(".submit-btn");
-  btns.forEach((btn) => {
+  const submitBtns = document.querySelectorAll(".submit-btn");
+  const modals = document.querySelectorAll(".modal");
+  const techBtns = document.querySelectorAll(".technical-specs");
+  var overlay = document.getElementById("overlay");
+
+  submitBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const value = btn.getAttribute("data-value");
       window.location.href = "/contact?item=" + value;
     });
   });
+
+  techBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal-id");
+      const modal = document.getElementById(modalId);
+      modal.style.display = "block";
+      overlay.style.display = "block";
+    });
+  });
+
+  modals.forEach((modal) => {
+    const closeBtn = modal.querySelector(".close");
+    const modalElement = modal as HTMLElement;
+    closeBtn.addEventListener("click", () => {
+      modalElement.style.display = "none";
+      overlay.style.display = "none";
+    });
+  });
+
+  overlay.onclick = function () {
+    modals.forEach((modal) => {
+      const modalElement = modal as HTMLElement;
+      modalElement.style.display = "none";
+    });
+    overlay.style.display = "none";
+  };
 </script>
 
-
- <!-- TODO
-- products dropdown menu on navbar
-- car technical details pop-up -->
+<!-- TODO
+- products dropdown menu on navbar 
+-->

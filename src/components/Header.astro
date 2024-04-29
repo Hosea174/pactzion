@@ -2,16 +2,14 @@
 // Component imports
 import Button from "../components/Button.astro";
 
-// Asset imports
-import logo from "../assets/pactzion-logo.svg";
-
 import "../styles/components/header.scss";
 ---
 
 <header>
   <div class="header-wrapper container">
     <a href="/"
-      ><svg class="logo"
+      ><svg
+        class="logo"
         xmlns="http://www.w3.org/2000/svg"
         width="130"
         height="31"
@@ -28,16 +26,31 @@ import "../styles/components/header.scss";
       <nav>
         <ul role="list" class="nav-links">
           <li class="nav-link" style="--i: 0">
-            <a href="/waiting" data-page="">Home</a>
+            <a href="/" class="active" data-page="home">Home</a>
           </li>
-          <li class="nav-link" style="--i: 2">
-            <a href="/waiting" data-page="about">About</a>
+          <li class="nav-link dropdown" style="--i: 2">
+            <a href="#" data-page="products">Products</a>
+            <div class="dropdown-menu">
+              <a href="/products/exports">Exports</a>
+              <a href="/products/changan">Changan</a>
+              <a href="/waiting">Real Estate</a>
+            </div>
           </li>
           <li class="nav-link" style="--i: 1">
-            <a href="/waiting" data-page="contact">Contact</a>
+            <a href="/about" data-page="about">About</a>
           </li>
           <li class="nav-link" style="--i: 3">
-            <a href="/waiting" data-page="products">Products</a>
+            <a href="/contact" data-page="contact">Contact</a>
+          </li>
+
+          <li class="nav-link only-mobile" style="--i: 5">
+            <a href="/products/exports">Exports</a>
+          </li>
+          <li class="nav-link only-mobile" style="--i: 4">
+            <a href="/products/changan">Changan</a>
+          </li>
+          <li class="nav-link only-mobile" style="--i: 6">
+            <a href="/waiting">Real Estate</a>
           </li>
         </ul>
       </nav>

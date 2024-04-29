@@ -327,7 +327,7 @@
     padding-block: $size-900;
 
     h2 {
-      margin-block: $size-600 $size-800;
+      margin-block: $size-500 $size-700;
     }
 
     .about-box {
@@ -506,7 +506,7 @@
     color: $clr-neutral-100;
 
     h2 {
-      margin-block-start: $size-600;
+      margin-block-start: $size-500;
       line-height: 135%;
       border-right: solid 3px white;
     }
@@ -518,7 +518,7 @@
     padding-block: $size-900;
 
     h2 {
-      margin-block: $size-600 $size-800;
+      margin-block: $size-500 $size-700;
     }
 
     .swiper {
@@ -651,7 +651,7 @@
     padding-block-end: $size-900;
 
     h2 {
-      margin-block: $size-600 $size-800;
+      margin-block: $size-500 $size-700;
     }
 
     .export-items-grid {
@@ -788,14 +788,14 @@
     padding-block: $size-900;
 
     h2 {
-      margin-block: $size-600;
+      margin-block: $size-500;
     }
 
     p.work-area-text {
       width: clamp(350px, 80vw, 700px);
       line-height: 135%;
       font-size: clamp(16px, 2vw, 18px);
-      margin-bottom: $size-800;
+      margin-bottom: $size-700;
       margin-inline: auto;
     }
 
@@ -817,7 +817,7 @@
     padding-block: $size-900;
 
     h2 {
-      margin-block: $size-600 $size-700;
+      margin-block: $size-500 $size-600;
       max-width: 700px;
       color: $clr-neutral-100;
       line-height: 114%;
@@ -842,7 +842,7 @@
 
       .contact-form {
         h2 {
-          margin-block: $size-600;
+          margin-block: $size-500;
         }
 
         .section-label {

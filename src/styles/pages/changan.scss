@@ -14,17 +14,21 @@ header .header-wrapper {
   }
 }
 
+.fs-tertiary-header {
+  font-size: clamp(1.375rem, 1.0034403669724772rem + 1.651376146788991vw, 2rem);
+}
+
 ::-webkit-scrollbar-track {
-  background: #9f9f9f;
+  background: #2f2f2f;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #181818;
+  background: #555;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #242424;
+  background: #777;
 }
 
 ::selection {
@@ -43,6 +47,7 @@ header .header-wrapper {
     padding-block: 5.5rem 2.2rem;
 
     .changan-big {
+      user-select: none;
       text-align: center;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.13) 58.36%, rgba(255, 255, 255, 0.00) 95.27%);
       background-clip: text;
@@ -57,6 +62,7 @@ header .header-wrapper {
 
       .swiper-slide {
         width: auto;
+        user-select: none;
       }
 
       &::after {
@@ -86,7 +92,7 @@ header .header-wrapper {
       .nav-btn {
         position: absolute;
         top: 45%;
-        z-index: 10;
+        z-index: 3;
         cursor: pointer;
         width: 39px;
         height: 42px;
@@ -152,17 +158,33 @@ header .header-wrapper {
             letter-spacing: 4px;
           }
 
-          button {
+          .slide-btns {
+            display: flex;
+            width: fit-content;
             margin-inline: auto;
-            border-radius: 0;
-            padding: .9rem 1.2rem;
-            color: #000;
-            background: #FFF;
-            text-transform: uppercase;
-            letter-spacing: .75px;
-            font-size: 1rem;
-            font-weight: 500;
+            gap: 1.3rem;
 
+            button {
+              border-radius: 0;
+              padding: .9rem 1.2rem;
+              color: #000;
+              background: #FFF;
+              text-transform: uppercase;
+              letter-spacing: .75px;
+              font-size: 1rem;
+              font-weight: 500;
+
+              &.technical-specs {
+                background: #ffffff00;
+                color: #FFF;
+                border: 1px solid #FFF;
+                transition: background ease-in-out .1s;
+
+                &:hover {
+                  background: #ffffff20;
+                }
+              }
+            }
           }
         }
 
@@ -363,5 +385,77 @@ header .header-wrapper {
       padding-block-start: 7rem;
     }
 
+  }
+}
+
+.modals-wrapper {
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+  }
+
+  .modal {
+    display: none;
+    width: clamp(350px, 80vw, 1000px);
+    height: clamp(600px, 90vh, 800px);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-inline: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    span {
+      position: absolute;
+      top: .5rem;
+      right: 1rem;
+      cursor: pointer;
+      font-size: 3rem;
+      color: #000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #fafafa;
+      }
+    }
+  }
+
+  @media (max-width: 860px) {
+    .modal {
+      padding: 3rem 1rem;
+    }
   }
 }

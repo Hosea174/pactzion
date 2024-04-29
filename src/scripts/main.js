@@ -23,12 +23,15 @@ function navLinkClick() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const currentPage = window.location.pathname.split("/").pop();
+  const pages = window.location.pathname.split("/");
+  console.log(pages)
   const links = document.querySelectorAll("nav li a");
+  const home = document.querySelector("a[data-page='home']");
   links.forEach((link) => {
     const linkPage = link.getAttribute("data-page");
-    if (currentPage === linkPage) {
+    if (pages.includes(linkPage)) {
       link.classList.add("active");
+      home.classList.remove("active");
     }
   });
 });
