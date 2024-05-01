@@ -13,13 +13,17 @@ const swiper = new Swiper(".swiper-portfolio", {
   },
 });
 
-const carousel = new Swiper(".carousel", {
-  spaceBetween: 40,
-  slidesPerView: "1",
-  modules: [Autoplay],
-  loop: true,
-  autoplay: { delay: 3000 },
-  speed: 700,
+window.addEventListener("load", function() {
+  setTimeout(function() {
+    const carousel = new Swiper(".carousel", {
+      spaceBetween: 40,
+      slidesPerView: "1",
+      modules: [Autoplay],
+      loop: true,
+      autoplay: { delay: 3000 },
+      speed: 700,
+    });
+  }, 3000);
 });
 
 const itemsCarousel = new Swiper(".itemsCarousel", {
