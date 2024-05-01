@@ -96,6 +96,7 @@ function changanAnimate() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("changan loaded")
   changanAnimate();
 });
 

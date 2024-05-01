@@ -663,47 +663,47 @@ import nedcIcon from "../../assets/icons/nedc-icon.svg";
       </div>
     </div>
   </main>
-</Layout>
-
-<script>
-  const submitBtns = document.querySelectorAll(".submit-btn");
-  const modals = document.querySelectorAll(".modal");
-  const techBtns = document.querySelectorAll(".technical-specs");
-  var overlay = document.getElementById("overlay");
-
-  submitBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const value = btn.getAttribute("data-value");
-      window.location.href = "/contact?item=" + value;
+  
+  <script>
+    const submitBtns = document.querySelectorAll(".submit-btn");
+    const modals = document.querySelectorAll(".modal");
+    const techBtns = document.querySelectorAll(".technical-specs");
+    var overlay = document.getElementById("overlay");
+  
+    submitBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const value = btn.getAttribute("data-value");
+        window.location.href = "/contact?item=" + value;
+      });
     });
-  });
-
-  techBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const modalId = btn.getAttribute("data-modal-id");
-      const modal = document.getElementById(modalId);
-      modal.style.display = "block";
-      overlay.style.display = "block";
+  
+    techBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const modalId = btn.getAttribute("data-modal-id");
+        const modal = document.getElementById(modalId);
+        modal.style.display = "block";
+        overlay.style.display = "block";
+      });
     });
-  });
-
-  modals.forEach((modal) => {
-    const closeBtn = modal.querySelector(".close");
-    const modalElement = modal as HTMLElement;
-    closeBtn.addEventListener("click", () => {
-      modalElement.style.display = "none";
-      overlay.style.display = "none";
-    });
-  });
-
-  overlay.onclick = function () {
+  
     modals.forEach((modal) => {
+      const closeBtn = modal.querySelector(".close");
       const modalElement = modal as HTMLElement;
-      modalElement.style.display = "none";
+      closeBtn.addEventListener("click", () => {
+        modalElement.style.display = "none";
+        overlay.style.display = "none";
+      });
     });
-    overlay.style.display = "none";
-  };
-</script>
+  
+    overlay.onclick = function () {
+      modals.forEach((modal) => {
+        const modalElement = modal as HTMLElement;
+        modalElement.style.display = "none";
+      });
+      overlay.style.display = "none";
+    };
+  </script>
+</Layout>
 
 <!-- TODO
 - products dropdown menu on navbar 
