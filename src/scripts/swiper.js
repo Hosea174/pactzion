@@ -13,16 +13,19 @@ const swiper = new Swiper(".swiper-portfolio", {
   },
 });
 
-setTimeout(function() {
-  const carousel = new Swiper(".carousel", {
-    spaceBetween: 40,
-    slidesPerView: "1",
-    modules: [Autoplay],
-    loop: true,
-    autoplay: { delay: 3000 },
-    speed: 700,
-  });
-}, 3000);
+const carousel = new Swiper(".carousel", {
+  slidesPerView: "1",
+  spaceBetween: 40,
+  modules: [Autoplay],
+  autoplay: { delay: 3000 },
+  speed: 700,
+  loop: true,
+});
+carousel.autoplay.stop();
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => carousel.autoplay.start(), 7000); // 1000 means 1s, it's in ms here.
+});
 
 const itemsCarousel = new Swiper(".itemsCarousel", {
   slidesPerView: "auto",
