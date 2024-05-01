@@ -37,7 +37,6 @@ export async function getStaticPaths() {
 }
 
 const { name, category, available, image, Content, post, posts } = Astro.props;
-console.log(posts);
 const md = markdownit();
 const htmlContent = md.render(post.compiledContent());
 const htmlString = he.decode(htmlContent);

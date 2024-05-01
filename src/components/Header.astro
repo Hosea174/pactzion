@@ -48,9 +48,12 @@ import "../styles/components/header.scss";
           </li>
 
           <li class="nav-link only-mobile" style="--i: 5">
-            <a href="/products/exports" aria-label="Exports">Exports</a>
+            <a href="/contact" aria-label="Contact">Contact</a>
           </li>
           <li class="nav-link only-mobile" style="--i: 4">
+            <a href="/products/exports" aria-label="Exports">Exports</a>
+          </li>
+          <li class="nav-link only-mobile" style="--i: 6">
             <a href="/products/changan" aria-label="Changan">Changan</a>
           </li>
           <!-- <li class="nav-link only-mobile" style="--i: 6">
@@ -66,3 +69,26 @@ import "../styles/components/header.scss";
     </button>
   </div>
 </header>
+
+<script>
+  const navToggler = document.querySelector(".nav-toggler") as HTMLElement;
+  const navMenu = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".navbar a");
+  allEventListners();
+
+  function allEventListners() {
+    navToggler.addEventListener("click", togglerClick);
+    navLinks.forEach((elem) => elem.addEventListener("click", navLinkClick));
+  }
+
+  function togglerClick() {
+    navToggler.classList.toggle("toggler-open");
+    navMenu.classList.toggle("open");
+  }
+
+  function navLinkClick() {
+    if (navMenu.classList.contains("open")) {
+      navToggler.click();
+    }
+  }
+</script>

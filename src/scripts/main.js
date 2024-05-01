@@ -1,30 +1,8 @@
 import { gsap } from "gsap";
 import SplitType from "split-type";
 
-const navToggler = document.querySelector(".nav-toggler");
-const navMenu = document.querySelector(".nav-links");
-const navLinks = document.querySelectorAll(".navbar a");
-allEventListners();
-
-function allEventListners() {
-  navToggler.addEventListener("click", togglerClick);
-  navLinks.forEach((elem) => elem.addEventListener("click", navLinkClick));
-}
-
-function togglerClick() {
-  navToggler.classList.toggle("toggler-open");
-  navMenu.classList.toggle("open");
-}
-
-function navLinkClick() {
-  if (navMenu.classList.contains("open")) {
-    navToggler.click();
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const pages = window.location.pathname.split("/");
-  console.log(pages);
   const links = document.querySelectorAll("nav li a");
   const home = document.querySelector("a[data-page='home']");
   links.forEach((link) => {
@@ -36,10 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-var copy = document.querySelector(".logos-slider-wrapper");
-if (copy) copy = copy.cloneNode(true);
-const partnersLogo = document.querySelector(".partners-logo")
-if (partnersLogo) partnersLogo.appendChild(copy);
+var copy = document.querySelector(".logos-slider-wrapper").cloneNode(true);
+document.querySelector(".partners-logo").appendChild(copy);
 
 function startLoader() {
   let counterElement = document.querySelector(".counter");
@@ -69,6 +45,18 @@ function startLoader() {
   const textOverlay = new SplitType(".overlay");
   const carImgs = document.querySelectorAll(".img-wrapper");
 
+  const zoomAnimation = gsap.timeline({
+    repeat: -1,
+    yoyo: true,
+  });
+
+  zoomAnimation.to(loaderAnimation, {
+    scale: 1.2,
+    duration: 0.5,
+    ease: "power2.inOut",
+  });
+
+  zoomAnimation.play();
   const tl = gsap.timeline();
   tl.set(bars, {
     transformOrigin: "100% 100%",
@@ -85,10 +73,10 @@ function startLoader() {
   });
 
   tl.to(loaderAnimation, {
-    yPercent: 150,
+    yPercent: 400,
     duration: 0.5,
     delay: 0.3,
-    ease: "power3.out",
+    ease: "power4.out",
     display: "none",
   });
 

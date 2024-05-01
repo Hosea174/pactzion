@@ -45,27 +45,13 @@ import pulses from "../assets/pulses.webp";
 import rsBuilding from "../assets/rs-building.webp";
 import car3 from "../assets/sl3.webp";
 import spices from "../assets/spices.webp";
-import worldMap from "../assets/world-map.svg";
+import worldMap from "../assets/world-map.webp";
+import loader from "../../public/favicon.svg";
 ---
 
 <Layout title="PactZion - A leading global trader in Ethiopia">
   <div class="loader">
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"></script>
-    <dotlottie-player
-      class="loader-animation"
-      src="https://lottie.host/5307332b-9bf6-4903-b142-1d2c5f115918/nP9ScI6byE.lottie"
-      background="transparent"
-      speed="1"
-      style="width: 300px; height: 300px"
-      direction="1"
-      playMode="normal"
-      loop
-      autoplay
-    >
-    </dotlottie-player>
-
+    <Image class="loader-animation" src={loader} alt="Loader Animation" />
     <p class="counter">0</p>
     <div class="loader-overlay">
       <div class="bar"></div>
@@ -104,7 +90,6 @@ import worldMap from "../assets/world-map.svg";
                 src={car1}
                 alt="Changan Deppal S7"
                 width="680"
-                loading="lazy"
               />
             </div>
 
