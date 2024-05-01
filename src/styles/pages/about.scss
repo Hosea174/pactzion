@@ -79,7 +79,6 @@ header .header-wrapper {
 
   .about-img-box {
     position: relative;
-
     img {
       width: 100%;
     }
@@ -140,7 +139,7 @@ header .header-wrapper {
 }
 .mission-vision-section {
   height: fit-content;
-  background-image: url("../../assets/digital-world.png");
+  background-image: url("../../assets/digital-world.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -249,7 +248,7 @@ header .header-wrapper {
 @media (max-width: 520px) {
   .mission-vision-section {
     height: fit-content;
-    background-image: url("../../assets/digital-world-mobile.png");
+    background-image: url("../../assets/digital-world-mobile.webp");
     margin-top: 23rem;
   }
 }
@@ -260,7 +259,7 @@ header .header-wrapper {
 
   .wrapper {
     .values-flex {
-      padding-block-start: $size-400;
+      padding-block-start: 1.5rem;
       display: flex;
       align-items: flex-start;
       gap: 2rem;
@@ -353,6 +352,7 @@ header .header-wrapper {
 }
 
 .board-members-section {
+  display: none;
   .wrapper {
     h2 {
       margin-bottom: $size-600;

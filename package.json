@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "astro": "^4.5.14",
+    "astro-compressor": "^0.4.1",
     "esbuild": "^0.20.2",
     "gsap": "^3.12.5",
     "he": "^1.2.0",

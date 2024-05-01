@@ -4,16 +4,18 @@ import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 import "../styles/pages/about.scss";
 
 // Asset imports
-import aboutImgLarge from "../assets/about-hero.png";
-import aboutImgSmall from "../assets/about-hero-small.png";
+import aboutImgLarge from "../assets/about-hero.webp";
+import aboutImgTablet from "../assets/about-hero-tablet.webp";
+import aboutImgMobile from "../assets/about-hero-mobile.webp";
 import blob from "../assets/blurry-blob.svg";
-import companyStructure from "../assets/company-structure.png";
-import companyStructureMobile from "../assets/company-structure-mobile.png";
-import valuesImg from "../assets/values-img.png";
+import companyStructure from "../assets/company-structure.webp";
+import companyStructureMobile from "../assets/company-structure-mobile.webp";
+import valuesImg from "../assets/values-img.webp";
 ---
 
 <Layout title="PactZion - About us">
@@ -32,13 +34,13 @@ import valuesImg from "../assets/values-img.png";
 
           <div class="subheader">
             <p class="fw-bold subheader-title">
-              PactZion is dedicated to crafting innovative solutions that
-              revolutionize the world of commerce.
+              Revolutionizing Commerce Through Innovation
             </p>
             <p class="subheader-description">
-              With a focus on integrity and innovation, we empower businesses to
-              thrive in the global marketplace, fostering sustainable growth and
-              mutual success
+              Co-create the next chapter of global trade with PactZion. Our
+              cutting-edge solutions empower businesses to flourish, built on a
+              foundation of ethical practices and a commitment to long-term
+              success.
             </p>
           </div>
         </div>
@@ -49,16 +51,19 @@ import valuesImg from "../assets/values-img.png";
       <div class="container wrapper | about-img-box">
         <picture>
           <source media="(min-width: 895px)" srcset={aboutImgLarge.src} />
-          <source media="(max-width: 895px)" srcset={aboutImgSmall.src} />
-          <img src={aboutImgSmall.src} alt="Pactzion staff members" />
+          <source media="(min-width: 400px)" srcset={aboutImgTablet.src} />
+          <source media="(max-width: 400px)" srcset={aboutImgMobile.src} />
+          <Image src={aboutImgMobile} alt="Pactzion staff members" />
         </picture>
         <div class="about-pactzion">
           <p class="about-text fw-bold">
-            With a focus on integrity and innovation, we empower businesses to
-            thrive in the global marketplace, fostering sustainable growth and
-            mutual success
+            PactZion crafts innovative solutions that tackle commerce
+            complexities, fostering mutual success with integrity at our core,
+            and empowering businesses to achieve their full potential.
           </p>
-          <Button text="Get in touch" class="btn-tertiary btn-dark" />
+          <a href="/contact"
+            ><Button text="Get in touch" class="btn-tertiary btn-dark" /></a
+          >
         </div>
       </div>
     </section>
@@ -89,7 +94,7 @@ import valuesImg from "../assets/values-img.png";
         <h2 class="fw-bold fs-secondary-header">Our Core Values</h2>
         <div class="values-flex">
           <div class="img-wrap">
-            <img src={valuesImg.src} alt="Pactzion staff members" />
+            <Image src={valuesImg} alt="Pactzion staff members" />
           </div>
           <div class="core-values">
             <div class="value">
@@ -202,7 +207,7 @@ import valuesImg from "../assets/values-img.png";
               media="(max-width: 530px)"
               srcset={companyStructureMobile.src}
             />
-            <img src={companyStructure.src} alt="Pactzion staff members" />
+            <Image src={companyStructure} alt="Pactzion staff members" />
           </picture>
         </div>
       </div>
@@ -298,10 +303,12 @@ import valuesImg from "../assets/values-img.png";
               Achieve global trade success with PactZion - your trusted partner
               for international growth.
             </h2>
-            <Button class="btn-primary cta-btn" text="Contact Us" />
+            <a href="/contact"
+              ><Button class="btn-primary cta-btn" text="Contact Us" /></a
+            >
           </div>
-          <img src={blob.src} class="blob-1" alt="" />
-          <img src={blob.src} class="blob-2" alt="" />
+          <Image src={blob} class="blob-1" alt="" />
+          <Image src={blob} class="blob-2" alt="" />
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@ header {
 
       .nav-link {
         position: relative;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease-out;
         cursor: pointer;
 
         a {
@@ -200,7 +200,7 @@ header {
 
         .nav-link {
           margin-block: $size-500;
-          transform: translateY(-50px);
+          transform: translateY(-20px);
           opacity: 0;
           font-size: $fs-500;
 

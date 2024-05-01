@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
+import { Image } from "astro:assets";
+
 // Stylesheet imports
 import "../styles/pages/index.scss";
 
@@ -28,7 +30,7 @@ import car4 from "../assets/eado.png";
 import car2 from "../assets/estar.png";
 import livestock from "../assets/livestock.webp";
 import oil from "../assets/oil-seeds.webp";
-import orangeChangan from "../assets/orange-changan.png";
+import orangeChangan from "../assets/orange-changan.webp";
 import office from "../assets/pactzion-office.webp";
 import aacLogo from "../assets/partner-logos/AAC.png";
 import aaccbaLogo from "../assets/partner-logos/AACCBA.png";
@@ -39,9 +41,8 @@ import etLogo from "../assets/partner-logos/ET.png";
 import ahaduLogo from "../assets/partner-logos/ahadu.png";
 import car1 from "../assets/s7.png";
 // import morLogo from "../assets/partner-logos/mor.png";
-import loaderAnimation from "../assets/loading.json";
 import pulses from "../assets/pulses.webp";
-import rsBuilding from "../assets/rs-building.png";
+import rsBuilding from "../assets/rs-building.webp";
 import car3 from "../assets/sl3.png";
 import spices from "../assets/spices.webp";
 import worldMap from "../assets/world-map.svg";
@@ -87,7 +88,7 @@ import worldMap from "../assets/world-map.svg";
     <section class="hero-section">
       <div class="wrapper">
         <div class="section-label hero-label">
-          <img src={featuredIcon.src} alt="" />
+          <Image src={featuredIcon} alt="" />
           <span>Featured Product</span>
         </div>
         <div class="car-text-box carousel swiper">
@@ -98,9 +99,9 @@ import worldMap from "../assets/world-map.svg";
 
           <div class="img-wrapper swiper-wrapper">
             <div class="swiper-slide">
-              <img
+              <Image
                 class="hero-car d-s7"
-                src={car1.src}
+                src={car1}
                 alt="Changan Deppal S7"
                 width="680"
                 loading="lazy"
@@ -108,9 +109,9 @@ import worldMap from "../assets/world-map.svg";
             </div>
 
             <div class="swiper-slide">
-              <img
+              <Image
                 class="hero-car d-estar"
-                src={car2.src}
+                src={car2}
                 alt="Changan Estar"
                 width="680"
                 loading="lazy"
@@ -118,9 +119,9 @@ import worldMap from "../assets/world-map.svg";
             </div>
 
             <div class="swiper-slide d-sl3">
-              <img
+              <Image
                 class="hero-car"
-                src={car3.src}
+                src={car3}
                 alt="Changan Deppal Sl3"
                 width="680"
                 loading="lazy"
@@ -128,9 +129,9 @@ import worldMap from "../assets/world-map.svg";
             </div>
 
             <div class="swiper-slide">
-              <img
+              <Image
                 class="hero-car d-eado"
-                src={car4.src}
+                src={car4}
                 alt="Changan Eado"
                 width="680"
                 loading="lazy"
@@ -141,29 +142,29 @@ import worldMap from "../assets/world-map.svg";
 
         <div class="bottom-box container">
           <div class="hero-socials">
-            <img class="line-arrow" src={line.src} alt="" />
+            <Image class="line-arrow" src={line} alt="" />
 
             <ul class="social-links" role="list">
               <li>
                 <a href="#" class="yt-social"
-                  ><img src={ytIcon.src} alt="YouTube" />
+                  ><Image src={ytIcon} alt="YouTube" />
                 </a>
               </li>
               <li>
                 <a href="#" class="in-social"
-                  ><img src={inIcon.src} alt="Linkedin" />
+                  ><Image src={inIcon} alt="Linkedin" />
                 </a>
               </li>
               <li>
                 <a href="#" class="fb-social"
-                  ><img src={fbIcon.src} alt="Facebook" />
+                  ><Image src={fbIcon} alt="Facebook" />
                 </a>
               </li>
             </ul>
 
-            <img
+            <Image
               class="line-arrow"
-              src={line.src}
+              src={line}
               alt=""
               style="transform: scaleY(-1);"
             />
@@ -172,7 +173,7 @@ import worldMap from "../assets/world-map.svg";
             <h2 class="fs-secondary-header fw-semi-bold-100">
               Effortless Elegance on Every Road.
             </h2>
-            <a href="/waiting"
+            <a href="/products/changan"
               ><Button class="btn-primary" text="Explore Changan" /></a
             >
           </div>
@@ -224,7 +225,7 @@ import worldMap from "../assets/world-map.svg";
                 <ul class="missions" role="list">
                   <li class="mission">
                     <div class="mission-icon">
-                      <img src={growthIcon.src} alt="" />
+                      <Image src={growthIcon} alt="" />
                     </div>
                     <p class="fw-semi-bold-200">
                       Promoting sustainable growth in Ethiopia
@@ -232,7 +233,7 @@ import worldMap from "../assets/world-map.svg";
                   </li>
                   <li class="mission">
                     <div class="mission-icon">
-                      <img src={connectionIcon.src} alt="" />
+                      <Image src={connectionIcon} alt="" />
                     </div>
                     <p class="fw-semi-bold-200">
                       Building meaningful connections
@@ -240,7 +241,7 @@ import worldMap from "../assets/world-map.svg";
                   </li>
                   <li class="mission">
                     <div class="mission-icon">
-                      <img src={jobIcon.src} alt="" />
+                      <Image src={jobIcon} alt="" />
                     </div>
                     <p class="fw-semi-bold-200">Creating job opportunities</p>
                   </li>
@@ -251,7 +252,7 @@ import worldMap from "../assets/world-map.svg";
               </div>
             </div>
             <div class="abt-right">
-              <img src={office.src} alt="Pactzion Office" />
+              <Image src={office} alt="Pactzion Office" />
             </div>
           </div>
 
@@ -326,7 +327,7 @@ import worldMap from "../assets/world-map.svg";
                   Your journey, our innovation. Explore a world of Changan
                   Electric Vehicles
                 </p>
-                <a href="/waiting">
+                <a href="/products/changan">
                   <Button
                     text="Drive The Future"
                     class="nav-button | btn-tertiary btn-white"
@@ -339,6 +340,7 @@ import worldMap from "../assets/world-map.svg";
                 alt="Changan Vehicle"
                 class="card-img"
                 width="800px"
+                style="height: unset;"
               />
             </div>
 
@@ -349,7 +351,7 @@ import worldMap from "../assets/world-map.svg";
                   Transforming spaces into homes. Explore our real estate
                   offerings that redefine modern living with style and comfort.
                 </p>
-                <a href="/waiting">
+                <a href="/contact">
                   <Button
                     text="Live Your Dream"
                     class="nav-button | btn-tertiary btn-white"
@@ -426,28 +428,28 @@ import worldMap from "../assets/world-map.svg";
           <div class="partners-logo">
             <ul class="logos-slider-wrapper" role="list">
               <li class="company-logo">
-                <img src={ahaduLogo.src} alt="Ahadu logo" />
+                <Image src={ahaduLogo} alt="Ahadu logo" />
               </li>
               <li class="company-logo">
-                <img src={boaLogo.src} alt="BoA logo" />
+                <Image src={boaLogo} alt="BoA logo" />
               </li>
               <li class="company-logo">
-                <img src={ecaLogo.src} alt="ECA logo" />
+                <Image src={ecaLogo} alt="ECA logo" />
               </li>
               <li class="company-logo">
-                <img src={aacLogo.src} alt="AAC logo" />
+                <Image src={aacLogo} alt="AAC logo" />
               </li>
               <li class="company-logo">
-                <img src={ecxLogo.src} alt="ECX logo" />
+                <Image src={ecxLogo} alt="ECX logo" />
               </li>
               <li class="company-logo">
-                <img src={etLogo.src} alt="ET logo" />
+                <Image src={etLogo} alt="ET logo" />
               </li>
               <!-- <li class="company-logo">
-                <img src={morLogo.src} alt="MOR logo" />
+                <Image src={morLogo} alt="MOR logo" />
               </li> -->
               <li class="company-logo">
-                <img src={aaccbaLogo.src} alt="AACCBA logo" />
+                <Image src={aaccbaLogo} alt="AACCBA logo" />
               </li>
             </ul>
           </div>
@@ -467,7 +469,7 @@ import worldMap from "../assets/world-map.svg";
           Behind the scenes, our global partnerships are the driving force,
           turning challenges into shared successes worldwide.
         </p>
-        <img src={worldMap.src} alt="Where we operate" class="world-map" />
+        <Image src={worldMap} alt="Where we operate" class="world-map" />
       </div>
     </section>
 
@@ -519,31 +521,28 @@ import worldMap from "../assets/world-map.svg";
           <div class="contact-info">
             <div class="contact-details">
               <div class="contact-detail">
-                <img
-                  src={mailIcon.src}
+                <Image
+                  src={mailIcon}
                   alt=""
                   class="contact-icon"
-                  width="25px"
                 />
                 <p class="info">info@pactzion.com</p>
               </div>
               <div class="contact-detail">
-                <img
-                  src={locationIcon.src}
+                <Image
+                  src={locationIcon}
                   alt=""
                   class="contact-icon"
-                  width="25px"
                 />
                 <p class="info">
                   Kasanchis, Bloom Tower, Addis Ababa, Ethiopia
                 </p>
               </div>
               <div class="contact-detail">
-                <img
-                  src={phoneIcon.src}
+                <Image
+                  src={phoneIcon}
                   alt=""
                   class="contact-icon"
-                  width="25px"
                 />
                 <p class="info">+251 91 234 5678 | +251 91 170 7713</p>
               </div>
