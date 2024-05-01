@@ -24,7 +24,7 @@ function navLinkClick() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const pages = window.location.pathname.split("/");
-  console.log(pages)
+  console.log(pages);
   const links = document.querySelectorAll("nav li a");
   const home = document.querySelector("a[data-page='home']");
   links.forEach((link) => {
@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-var copy = document.querySelector(".logos-slider-wrapper").cloneNode(true);
-document.querySelector(".partners-logo").appendChild(copy);
+var copy = document.querySelector(".logos-slider-wrapper");
+if (copy) copy = copy.cloneNode(true);
+const partnersLogo = document.querySelector(".partners-logo")
+if (partnersLogo) partnersLogo.appendChild(copy);
 
 function startLoader() {
   let counterElement = document.querySelector(".counter");
