@@ -24,7 +24,7 @@ const carousel = new Swiper(".carousel", {
 carousel.autoplay.stop();
 
 window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => carousel.autoplay.start(), 7000); // 1000 means 1s, it's in ms here.
+  setTimeout(() => carousel.autoplay.start(), 7000);
 });
 
 const itemsCarousel = new Swiper(".itemsCarousel", {

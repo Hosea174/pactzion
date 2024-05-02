@@ -1,18 +1,6 @@
 import { gsap } from "gsap";
 import SplitType from "split-type";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const pages = window.location.pathname.split("/");
-  const links = document.querySelectorAll("nav li a");
-  const home = document.querySelector("a[data-page='home']");
-  links.forEach((link) => {
-    const linkPage = link.getAttribute("data-page");
-    if (pages.includes(linkPage)) {
-      link.classList.add("active");
-      home.classList.remove("active");
-    }
-  });
-});
 
 var copy = document.querySelector(".logos-slider-wrapper").cloneNode(true);
 document.querySelector(".partners-logo").appendChild(copy);
